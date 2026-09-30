@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#111110">
-<title>Andrea Padilha · Assessoria & RP</title>
+<title>Andrea Padilha · Consultora de Bem-Estar</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Assessoria de imprensa e relações públicas para marcas e pessoas que querem ser lembradas. Reputação e posicionamento com estratégia.">
-<meta property="og:title" content="Andrea Padilha · A sua marca merece ser notada">
-<meta property="og:description" content="Assessoria de imprensa, RP e posicionamento com estratégia.">
+<meta name="description" content="Saúde e bem-estar natural pra sua família fazer escolhas melhores. Óleos essenciais dōTERRA, hábitos e acompanhamento — com a Andrea Padilha.">
+<meta property="og:title" content="Andrea Padilha · Bem-estar que começa em casa">
+<meta property="og:description" content="Saúde e bem-estar natural com óleos essenciais dōTERRA e hábitos simples.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +16,11 @@
 <style>
 :root{
   --bg:#FAF9F5; --surface:#FFFFFF; --ink:#131210; --muted:#5E5B54;
-  --line:rgba(19,18,16,.14); --accent:#E4482D; --deep:#131210; --deep-2:#0B0B09; --deep-fg:#F7F4EC; --deep-muted:#B7B2A6; --deep-line:rgba(247,244,236,.16);
+  --line:rgba(19,18,16,.14); --accent:#3E7E63; --deep:#131210; --deep-2:#0B0B09; --deep-fg:#F7F4EC; --deep-muted:#B7B2A6; --deep-line:rgba(247,244,236,.16);
   --maxw:1120px; color-scheme:light;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#100F0D;--surface:#181713;--ink:#F4F1E9;--muted:#ABA79B;--line:rgba(244,241,233,.14);--accent:#FF6A50;--deep:#050504;--deep-2:#000;--deep-fg:#F7F4EC;--deep-muted:#B7B2A6;color-scheme:dark;}}
-:root[data-theme="dark"]{--bg:#100F0D;--surface:#181713;--ink:#F4F1E9;--muted:#ABA79B;--line:rgba(244,241,233,.14);--accent:#FF6A50;--deep:#050504;--deep-2:#000;--deep-fg:#F7F4EC;--deep-muted:#B7B2A6;color-scheme:dark;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#100F0D;--surface:#181713;--ink:#F4F1E9;--muted:#ABA79B;--line:rgba(244,241,233,.14);--accent:#6FBF9A;--deep:#050504;--deep-2:#000;--deep-fg:#F7F4EC;--deep-muted:#B7B2A6;color-scheme:dark;}}
+:root[data-theme="dark"]{--bg:#100F0D;--surface:#181713;--ink:#F4F1E9;--muted:#ABA79B;--line:rgba(244,241,233,.14);--accent:#6FBF9A;--deep:#050504;--deep-2:#000;--deep-fg:#F7F4EC;--deep-muted:#B7B2A6;color-scheme:dark;}
 *{box-sizing:border-box}
 body{margin:0; background:var(--bg); color:var(--ink); font-family:"Inter",system-ui,sans-serif; font-size:clamp(1rem,.7rem+.9vw,1.12rem); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden}
 h1,h2,h3,.disp{font-family:"Archivo",system-ui,sans-serif; font-weight:800; line-height:.98; letter-spacing:-.02em; margin:0; text-transform:none}
@@ -40,6 +40,11 @@ p{margin:0} a{color:inherit;text-decoration:none} img{max-width:100%;display:blo
 .brand em{color:var(--accent); font-style:normal}
 .nav{display:flex; gap:clamp(12px,2.4vw,26px); align-items:center}
 .nav-links{display:none} @media(min-width:860px){.nav-links{display:flex; gap:24px}} .nav-links a{color:var(--muted); font-size:.92rem; font-weight:500} .nav-links a:hover{color:var(--ink)}
+/* selo de conta real */
+.ig-selo{display:inline-flex; align-items:center; gap:.6em; border:1.5px solid var(--ink); border-radius:999px; padding:.3em .9em .3em .3em; margin-bottom:1.1em; font-size:.82rem; color:var(--muted); background:var(--surface)}
+.ig-selo img{width:36px; height:36px; border-radius:50%; object-fit:cover; border:1.5px solid var(--accent)}
+.ig-selo b{color:var(--ink); font-weight:700; font-family:"Archivo"}
+.ig-selo:hover{border-color:var(--accent)}
 /* HERO editorial claro + chip de video flutuante */
 .hero .wrap{padding-block:clamp(40px,6vw,80px)}
 .hero-top{display:flex; justify-content:space-between; align-items:baseline; border-bottom:1.5px solid var(--ink); padding-bottom:14px; gap:14px; flex-wrap:wrap}
@@ -96,32 +101,33 @@ body.js-reveal .reveal{opacity:0; transform:translateY(22px); transition:opacity
 <body>
 <header class="topbar"><div class="wrap">
   <a class="brand" href="#topo">Andrea<em>.</em>Padilha</a>
-  <nav class="nav"><div class="nav-links"><a href="#servicos">Serviços</a><a href="#band">Reputação</a><a href="#duvidas">Dúvidas</a></div>
+  <nav class="nav"><div class="nav-links"><a href="#servicos">Como ajudo</a><a href="#band">Bem-estar</a><a href="#duvidas">Dúvidas</a></div>
   <a class="btn btn-primary" href="#conversar">Falar comigo</a></nav>
 </div></header>
 
 <main id="topo">
   <section class="hero"><div class="wrap">
-    <div class="hero-top"><span class="meta">Assessoria de imprensa · RP</span><span class="meta">Marca · Reputação · Mídia</span></div>
+    <div class="hero-top"><span class="meta">Consultora de bem-estar · dōTERRA</span><span class="meta">Saúde · Família · Equilíbrio</span></div>
     <div class="hero-grid">
       <div>
-        <h1><span class="ac">Ser visto</span> não é sorte.<br>É <span class="out">estratégia.</span></h1>
-        <p class="lede">Eu ajudo marcas e pessoas a serem lembradas pelos motivos certos. Assessoria de imprensa, posicionamento e reputação, com plano e consistência.</p>
-        <div class="hero-cta"><a class="btn btn-primary" href="#conversar">Quero aparecer certo</a><a class="btn btn-ghost" href="#servicos">Ver serviços</a></div>
+        <a class="ig-selo" href="https://www.instagram.com/andreapadilha.rp/" target="_blank" rel="noopener"><img src="assets/avatar.jpg" alt="Foto de perfil da Andrea Padilha no Instagram" width="36" height="36"><span>@andreapadilha.rp · <b>conta real</b></span></a>
+        <h1><span class="ac">Bem-estar</span> não vem por acaso.<br>Vem de <span class="out">escolhas.</span></h1>
+        <p class="lede">Eu ajudo famílias a viverem com mais saúde e equilíbrio, de um jeito natural — com óleos essenciais dōTERRA, hábitos simples e acompanhamento de perto.</p>
+        <div class="hero-cta"><a class="btn btn-primary" href="#conversar">Quero cuidar disso</a><a class="btn btn-ghost" href="#servicos">Ver como funciona</a></div>
       </div>
       <div class="reelwrap">
         <div class="reel" data-float="1"><video src="media/chip.mp4" poster="media/chip-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></div>
-        <span class="reeltag" data-float="1.6">Na mídia</span>
+        <span class="reeltag" data-float="1.6">Bem-estar</span>
       </div>
     </div>
   </div></section>
 
   <section class="section"><div class="wrap">
-    <div class="head reveal"><span class="kick">O problema</span><h2>Marca boa que ninguém conhece não vende.</h2></div>
+    <div class="head reveal"><span class="kick">O problema</span><h2>Você cuida de todo mundo — e de você, quando?</h2></div>
     <div class="probs">
-      <div class="prob reveal"><span class="n">01</span><p>Você faz um trabalho excelente, mas poucos sabem que ele existe.</p></div>
-      <div class="prob reveal"><span class="n">02</span><p>Aparece sem constância e sem uma mensagem clara.</p></div>
-      <div class="prob reveal"><span class="n">03</span><p>Tem medo de se expor e falar a coisa errada na hora errada.</p></div>
+      <div class="prob reveal"><span class="n">01</span><p>A correria empurra a sua saúde e a da sua família sempre pra depois.</p></div>
+      <div class="prob reveal"><span class="n">02</span><p>Você tenta de tudo, mas sem constância nada se sustenta.</p></div>
+      <div class="prob reveal"><span class="n">03</span><p>Quer uma vida mais natural, mas não sabe por onde começar.</p></div>
     </div>
   </div></section>
 
@@ -129,45 +135,45 @@ body.js-reveal .reveal{opacity:0; transform:translateY(22px); transition:opacity
     <video class="band-bg" src="media/hero.mp4" poster="media/hero-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
     <div class="band-veil" aria-hidden="true"></div>
     <div class="wrap reveal">
-      <span class="kick">O que está em jogo</span>
-      <h2>Reputação se constrói <span class="ac">antes</span> de você precisar dela.</h2>
-      <p>Quando a oportunidade chega, quem já é lembrado sai na frente. Meu trabalho é fazer a sua marca ocupar esse espaço com verdade e estratégia, não com barulho.</p>
-      <div style="margin-top:1.8em"><a class="btn btn-primary" href="#conversar">Construir minha presença</a></div>
+      <span class="kick">O que muda de verdade</span>
+      <h2>Saúde se constrói <span class="ac">no dia a dia</span>, não num milagre.</h2>
+      <p>Não é sobre um produto mágico. É sobre pequenas escolhas, repetidas com apoio, que mudam como a sua casa vive — o sono, a energia, o humor. É isso que eu acompanho com você.</p>
+      <div style="margin-top:1.8em"><a class="btn btn-primary" href="#conversar">Começar com apoio</a></div>
     </div>
   </section>
 
   <section class="section" id="servicos"><div class="wrap">
-    <div class="head center reveal"><span class="kick">Como eu trabalho</span><h2>Três frentes pra sua marca ser notada.</h2></div>
+    <div class="head center reveal"><span class="kick">Como eu te acompanho</span><h2>Bem-estar que cabe na sua rotina.</h2></div>
     <div class="svc">
-      <div class="scard reveal"><div class="n">A</div><h3>Assessoria de imprensa</h3><p>Sua marca nas pautas certas, com relacionamento real com veículos e jornalistas.</p></div>
-      <div class="scard reveal"><div class="n">B</div><h3>Posicionamento</h3><p>Uma mensagem clara e uma presença consistente, pra você ser lembrada pelo que importa.</p></div>
-      <div class="scard reveal"><div class="n">C</div><h3>Gestão de reputação</h3><p>Cuidado com a imagem no dia a dia e preparo pra falar bem nos momentos que contam.</p></div>
+      <div class="scard reveal"><div class="n">A</div><h3>Bem-estar natural</h3><p>Óleos essenciais dōTERRA e hábitos simples pra cuidar do corpo, do sono e do humor da família.</p></div>
+      <div class="scard reveal"><div class="n">B</div><h3>Rotina &amp; equilíbrio</h3><p>Escolhas melhores no dia a dia, no seu ritmo, com acompanhamento pra manter a constância.</p></div>
+      <div class="scard reveal"><div class="n">C</div><h3>Oportunidade de renda</h3><p>Se fizer sentido pra você, te mostro como transformar esse cuidado em uma fonte de renda.</p></div>
     </div>
   </div></section>
 
   <section class="section" id="duvidas" style="padding-top:0"><div class="wrap">
     <div class="head center reveal"><span class="kick">Dúvidas</span><h2>O que costumam me perguntar.</h2></div>
     <div class="faq reveal">
-      <details><summary>Assessoria serve pra empresa pequena ou pessoa? <span class="p">+</span></summary><p>Serve pros dois. O que muda é a estratégia. A gente adapta ao seu momento e ao seu objetivo.</p></details>
-      <details><summary>Você garante que eu saio na mídia? <span class="p">+</span></summary><p>Ninguém sério garante espaço editorial, e eu não vou te prometer isso. O que eu faço é criar pauta relevante e relacionamento pra aumentar muito as suas chances.</p></details>
-      <details><summary>Preciso ter perfil grande pra começar? <span class="p">+</span></summary><p>Não. Reputação se constrói de dentro pra fora. Começamos com o que você já tem.</p></details>
-      <details><summary>Como é o trabalho no dia a dia? <span class="p">+</span></summary><p>Com plano, calendário e acompanhamento. Você sempre sabe o que está sendo feito e por quê.</p></details>
-      <details><summary>Como faço pra começar? <span class="p">+</span></summary><p>Me chama pra uma conversa. A gente entende o seu momento e eu te mostro o caminho.</p></details>
+      <details><summary>Preciso já conhecer óleos essenciais? <span class="p">+</span></summary><p>Não. Eu te apresento do começo, com indicação pro seu momento e pra rotina da sua família.</p></details>
+      <details><summary>Isso substitui médico ou tratamento? <span class="p">+</span></summary><p>Não. É um cuidado complementar, de bem-estar. Nada substitui a orientação de um profissional de saúde.</p></details>
+      <details><summary>Funciona pra quem tem rotina corrida? <span class="p">+</span></summary><p>Sim — a ideia é justamente hábitos simples que cabem no seu dia, sem virar mais um peso.</p></details>
+      <details><summary>E a parte de renda, como é? <span class="p">+</span></summary><p>Se você quiser, te mostro como indicar e construir uma renda com o que já usa e ama. Sem pressão, no seu tempo.</p></details>
+      <details><summary>Como faço pra começar? <span class="p">+</span></summary><p>Me chama pra uma conversa. Eu entendo o seu momento e te mostro o primeiro passo.</p></details>
     </div>
   </div></section>
 
   <section class="section" id="conversar" style="padding-top:0"><div class="wrap"><div class="cta reveal">
     <div>
       <span class="kick" style="color:var(--accent)">O próximo passo</span>
-      <h2>Vamos colocar a sua marca <span class="ac">no lugar certo?</span></h2>
-      <p style="color:var(--deep-muted); margin-top:1em; max-width:40ch">Me conta o que você quer conquistar em visibilidade. A primeira conversa é pra entender o seu caso.</p>
+      <h2>Vamos cuidar da sua família <span class="ac">de um jeito melhor?</span></h2>
+      <p style="color:var(--deep-muted); margin-top:1em; max-width:40ch">Me conta como está a rotina de vocês. A primeira conversa é pra entender o seu momento.</p>
     </div>
     <div>
       <span class="demo-pill">● Modo demonstração</span>
       <form id="leadForm" novalidate>
-        <div class="field"><label for="nome">Nome</label><input id="nome" type="text" autocomplete="name" placeholder="Seu nome ou da sua marca" required></div>
+        <div class="field"><label for="nome">Nome</label><input id="nome" type="text" autocomplete="name" placeholder="Seu nome" required></div>
         <div class="field"><label for="zap">WhatsApp</label><input id="zap" type="tel" autocomplete="tel" placeholder="(51) 9 0000-0000" required></div>
-        <div class="field"><label for="motivo">O que você busca?</label><select id="motivo"><option>Assessoria de imprensa</option><option>Posicionamento de marca</option><option>Gestão de reputação</option><option>Ainda quero entender</option></select></div>
+        <div class="field"><label for="motivo">O que você busca?</label><select id="motivo"><option>Bem-estar &amp; óleos essenciais</option><option>Mais energia e equilíbrio</option><option>Oportunidade de renda</option><option>Ainda quero entender</option></select></div>
         <label class="consent"><input type="checkbox" required> Concordo em ser contatada(o) sobre a minha solicitação.</label>
         <div style="margin-top:16px"><button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Falar com a Andrea</button></div>
         <p class="form-note">Prévia de demonstração: nenhum dado é enviado ou armazenado.</p>

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1C2A22">
+<title>Star Holístico · Terapias & Bem-estar</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Terapias holísticas e bem-estar em um espaço de acolhimento. Desacelere, se escute e reencontre o seu equilíbrio.">
+<meta property="og:title" content="Star Holístico — Equilíbrio começa quando você se escuta">
+<meta property="og:description" content="Terapias holísticas e bem-estar com acolhimento, no seu tempo.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F1F4EF; --surface:#FFFFFF; --ink:#1E2620; --muted:#5B655C;
+  --line:rgba(30,38,32,.12); --gold:#4F6B41; --gold-soft:#C2D3B4;
+  --deep:#1C2A22; --deep-2:#121C16; --deep-fg:#EDF2E9; --deep-muted:#B6C6B8;
+  --deep-line:rgba(237,242,233,.16);
+  --radius:18px; --maxw:1080px; --step:clamp(1rem,.6rem + 1.4vw,1.25rem); color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0D130F; --surface:#141C16; --ink:#E7EFE6; --muted:#A2AE9F;
+  --line:rgba(231,239,230,.14); --gold:#8AA96F; --gold-soft:#C2D3B4;
+  --deep:#16221A; --deep-2:#0B120D; --deep-fg:#EDF2E9; --deep-muted:#AEBFAF;
+  --deep-line:rgba(237,242,233,.16); color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0D130F; --surface:#141C16; --ink:#E7EFE6; --muted:#A2AE9F;
+  --line:rgba(231,239,230,.14); --gold:#8AA96F; --gold-soft:#C2D3B4;
+  --deep:#16221A; --deep-2:#0B120D; --deep-fg:#EDF2E9; --deep-muted:#AEBFAF;
+  --deep-line:rgba(237,242,233,.16); color-scheme:dark;}
+
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink); font-family:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:var(--step); line-height:1.6; margin:0; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+h1,h2,h3,.display{font-family:"Fraunces","Georgia",serif; font-weight:500; line-height:1.05; text-wrap:balance; letter-spacing:-.01em}
+p{margin:0} a{color:inherit} img{max-width:100%}
+.wrap{max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(16px,5vw,40px)}
+.eyebrow{font-size:.74rem; letter-spacing:.18em; text-transform:uppercase; font-weight:600; color:var(--gold)}
+.muted{color:var(--muted)} .section{padding-block:clamp(56px,9vw,116px)}
+.btn{display:inline-flex; align-items:center; gap:.5em; font-family:"Figtree"; font-weight:600; font-size:1rem;
+  padding:.85em 1.4em; border-radius:999px; border:1px solid transparent; cursor:pointer; text-decoration:none;
+  transition:transform .25s ease, background .25s ease, box-shadow .25s ease}
+.btn:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+.btn-primary{background:var(--gold); color:#fff; box-shadow:0 10px 30px -12px rgba(79,107,65,.6)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent; border-color:var(--line); color:inherit}
+.btn-ghost:hover{border-color:var(--gold); color:var(--gold)}
+.on-deep .btn-ghost{border-color:var(--deep-line); color:var(--deep-fg)}
+.on-deep .btn-ghost:hover{border-color:var(--gold-soft); color:var(--gold-soft)}
+.topbar{position:sticky; top:env(safe-area-inset-top,0px); z-index:40; backdrop-filter:blur(10px);
+  background:color-mix(in srgb,var(--bg) 80%,transparent); border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex; align-items:center; justify-content:space-between; padding-block:14px}
+.brand{display:flex; align-items:center; gap:.6em; font-family:"Fraunces"; font-weight:600; font-size:1.15rem; letter-spacing:-.01em; text-decoration:none}
+.brand .mono{display:grid; place-items:center; width:34px; height:34px; border-radius:50%; background:var(--deep); color:var(--gold-soft); font-size:.85rem}
+.nav{display:flex; align-items:center; gap:clamp(14px,2.5vw,30px)}
+.nav a{text-decoration:none; font-size:.95rem; color:var(--muted)} .nav a:hover{color:var(--ink)} .nav .btn{padding:.6em 1.1em}
+.nav-links{display:none} @media(min-width:820px){.nav-links{display:flex; gap:26px}}
+.theme-toggle{background:transparent; border:1px solid var(--line); color:var(--muted); width:38px; height:38px; border-radius:50%; cursor:pointer; font-size:1rem; display:grid; place-items:center}
+.theme-toggle:hover{color:var(--gold); border-color:var(--gold)}
+.hero{position:relative; overflow:hidden; background:var(--deep); color:var(--deep-fg); isolation:isolate}
+.hero-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0}
+.hero-veil{position:absolute; inset:0; z-index:1; background:
+  linear-gradient(90deg,rgba(18,28,22,.94) 0%,rgba(18,28,22,.80) 46%,rgba(18,28,22,.50) 100%),
+  linear-gradient(180deg,rgba(18,28,22,.30),rgba(18,28,22,.72))}
+@media(max-width:640px){.hero-veil{background:linear-gradient(180deg,rgba(18,28,22,.72),rgba(18,28,22,.90))}}
+.hero .wrap{position:relative; z-index:2; padding-block:clamp(70px,13vw,150px)}
+.aurora{position:absolute; inset:-20% -10% -10% -10%; z-index:1; filter:blur(60px); opacity:.42; mix-blend-mode:screen}
+.aurora span{position:absolute; border-radius:50%; mix-blend-mode:screen}
+.aurora .a1{width:52vw; height:52vw; left:-6vw; top:-8vw; background:radial-gradient(circle at 30% 30%,rgba(138,169,111,.5),transparent 62%); animation:drift1 18s ease-in-out infinite}
+.aurora .a2{width:46vw; height:46vw; right:-4vw; top:8vw; background:radial-gradient(circle at 60% 40%,rgba(194,211,180,.4),transparent 64%); animation:drift2 22s ease-in-out infinite}
+@keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(6%,4%) scale(1.08)}}
+@keyframes drift2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-5%,6%) scale(1.12)}}
+.hero-grid{display:grid; gap:clamp(30px,5vw,56px); grid-template-columns:1fr}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr; align-items:center}}
+.hero h1{font-size:clamp(2.6rem,1.4rem + 5.6vw,5rem); margin:.35em 0 .5em}
+.hero h1 em{font-style:italic; color:var(--gold-soft)}
+.hero .lede{font-size:clamp(1.05rem,.95rem + .5vw,1.3rem); color:var(--deep-muted); max-width:32ch}
+.hero-cta{display:flex; flex-wrap:wrap; gap:14px; margin-top:2em}
+.hero-trust{margin-top:2.4em; font-size:.9rem; color:var(--deep-muted); display:flex; align-items:center; gap:.7em; flex-wrap:wrap}
+.dot{width:6px; height:6px; border-radius:50%; background:var(--gold-soft); display:inline-block}
+.portrait{position:relative; justify-self:center}
+.portrait-frame{position:relative; width:min(360px,74vw); aspect-ratio:4/5; border-radius:200px 200px 22px 22px;
+  background:linear-gradient(160deg,rgba(237,242,233,.14),rgba(237,242,233,.04)); border:1px solid var(--deep-line);
+  overflow:hidden; box-shadow:0 40px 90px -40px rgba(0,0,0,.6)}
+.portrait-img{width:100%; height:100%; object-fit:cover; object-position:50% 40%; display:block}
+.lead-2{max-width:60ch}
+.grid-3{display:grid; gap:20px; grid-template-columns:1fr} @media(min-width:720px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.grid-2{display:grid; gap:22px; grid-template-columns:1fr} @media(min-width:800px){.grid-2{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:26px}
+.card h3{font-size:1.35rem; margin:.2em 0 .4em}
+.card .num{font-family:"Fraunces"; font-size:.95rem; color:var(--gold); font-weight:600}
+.head-block{max-width:34ch; margin-bottom:2.4em} .head-block h2{font-size:clamp(1.9rem,1.3rem + 2.4vw,3.1rem); margin:.25em 0 .5em}
+.scenario{display:flex; gap:.8em; align-items:flex-start; padding:22px; border-radius:var(--radius); background:var(--surface); border:1px solid var(--line)}
+.scenario .q{font-family:"Fraunces"; font-size:1.7rem; color:var(--gold-soft); line-height:1}
+.band{position:relative; overflow:hidden; background:var(--deep); color:var(--deep-fg)}
+.band::before{content:""; position:absolute; inset:0; opacity:.5;
+  background:radial-gradient(60% 90% at 15% 20%,rgba(138,169,111,.26),transparent 60%),radial-gradient(50% 80% at 90% 80%,rgba(194,211,180,.18),transparent 60%)}
+.band .wrap{position:relative; z-index:2}
+.band h2{font-size:clamp(2.1rem,1.4rem + 3.4vw,3.8rem); max-width:16ch} .band h2 em{font-style:italic; color:var(--gold-soft)}
+.band p{color:var(--deep-muted); max-width:52ch; margin-top:1.2em; font-size:1.1rem}
+.steps{display:grid; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+@media(min-width:860px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{background:var(--surface); padding:28px 24px}
+.step .n{font-family:"Fraunces"; font-size:2.4rem; color:var(--gold); line-height:1; font-variant-numeric:tabular-nums}
+.step h3{font-size:1.2rem; margin:.5em 0 .35em} .step p{color:var(--muted); font-size:.98rem}
+.checks{display:grid; gap:16px}
+.check{display:flex; gap:1em; align-items:flex-start; padding:20px 22px; border-left:3px solid var(--gold); background:var(--surface); border-radius:0 var(--radius) var(--radius) 0}
+.check .ico{color:var(--gold); font-family:"Fraunces"; font-weight:600}
+.lifeband{position:relative; overflow:hidden; min-height:min(78vh,620px); display:grid; align-items:center; isolation:isolate}
+.lifeband-bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0}
+.lifeband-veil{position:absolute; inset:0; z-index:1; background:linear-gradient(90deg,rgba(18,28,22,.92) 0%,rgba(18,28,22,.78) 42%,rgba(18,28,22,.30) 100%)}
+@media(max-width:640px){.lifeband-veil{background:linear-gradient(180deg,rgba(18,28,22,.62),rgba(18,28,22,.92))}}
+.lifeband .wrap{position:relative; z-index:2; padding-block:clamp(60px,10vw,110px)}
+.lifeband-inner{max-width:34ch; color:var(--deep-fg)}
+.lifeband-inner h2{font-size:clamp(2.1rem,1.4rem + 3.2vw,3.6rem); margin:.25em 0 .5em} .lifeband-inner h2 em{font-style:italic; color:var(--gold-soft)}
+.lifeband-inner p{color:var(--deep-muted); font-size:1.08rem; margin-bottom:1.6em}
+.about{display:grid; gap:clamp(28px,5vw,60px); grid-template-columns:1fr} @media(min-width:860px){.about{grid-template-columns:.9fr 1.1fr; align-items:center}}
+.about-card{background:var(--deep); color:var(--deep-fg); border-radius:24px; padding:34px; position:relative; overflow:hidden}
+.about-card .mono{font-family:"Fraunces"; font-size:2.6rem; color:var(--gold-soft)}
+.about-card ul{list-style:none; padding:0; margin:1.4em 0 0; display:grid; gap:.7em}
+.about-card li{display:flex; gap:.6em; color:var(--deep-muted)} .about-card li::before{content:"·"; color:var(--gold-soft); font-weight:700}
+.faq{display:grid; gap:12px; max-width:760px}
+details{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:2px 20px} details[open]{border-color:var(--gold)}
+summary{cursor:pointer; padding:18px 0; font-family:"Fraunces"; font-size:1.12rem; list-style:none; display:flex; justify-content:space-between; gap:1em; align-items:center}
+summary::-webkit-details-marker{display:none} summary .plus{color:var(--gold); font-size:1.3rem; transition:transform .2s ease}
+details[open] summary .plus{transform:rotate(45deg)} details p{color:var(--muted); padding:0 0 20px}
+.form-wrap{background:var(--surface); border:1px solid var(--line); border-radius:24px; padding:clamp(24px,4vw,40px)}
+.field{display:grid; gap:.4em; margin-bottom:16px} .field label{font-size:.85rem; font-weight:600}
+.field input,.field select,.field textarea{font-family:inherit; font-size:1rem; padding:.8em .9em; border-radius:12px; border:1px solid var(--line); background:var(--bg); color:var(--ink)}
+.field input:focus,.field select:focus{outline:2px solid var(--gold); outline-offset:1px; border-color:var(--gold)}
+.consent{display:flex; gap:.6em; align-items:flex-start; font-size:.85rem; color:var(--muted)} .consent input{margin-top:.2em}
+.form-note{margin-top:14px; font-size:.85rem; color:var(--muted)}
+.form-ok{display:none; background:var(--deep); color:var(--deep-fg); border-radius:16px; padding:22px; margin-top:16px} .form-ok.show{display:block}
+.demo-pill{display:inline-flex; align-items:center; gap:.5em; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); border:1px solid var(--line); border-radius:999px; padding:.4em .8em; margin-bottom:1.2em}
+.footer{background:var(--deep-2); color:var(--deep-fg); padding-block:56px 40px}
+.footer .cols{display:grid; gap:30px; grid-template-columns:1fr} @media(min-width:720px){.footer .cols{grid-template-columns:1.4fr 1fr 1fr}}
+.footer a{color:var(--deep-muted); text-decoration:none; display:block; padding:.25em 0} .footer a:hover{color:var(--gold-soft)}
+.footer h4{font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-soft); margin:0 0 .8em}
+.footer .copy{margin-top:34px; padding-top:22px; border-top:1px solid var(--deep-line); font-size:.82rem; color:var(--deep-muted); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap}
+.copytext{cursor:pointer; text-decoration:underline dotted; text-underline-offset:3px}
+body.js-reveal .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)}
+body.js-reveal .reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){.aurora span,.band::before{animation:none!important} *{scroll-behavior:auto!important}}
+.ig-selo{display:inline-flex; align-items:center; gap:.55em; border:1px solid currentColor; border-radius:999px; padding:.28em .9em .28em .28em; margin-bottom:1em; font-size:.8rem; text-decoration:none; color:inherit; opacity:.9}
+.ig-selo:hover{opacity:1}
+.ig-selo img{width:34px; height:34px; border-radius:50%; object-fit:cover; border:1px solid currentColor}
+.ig-selo b{font-weight:700}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="#topo"><span class="mono">SH</span> Star Holístico</a>
+  <nav class="nav" aria-label="Principal">
+    <div class="nav-links">
+      <a href="#terapias">Terapias</a><a href="#experiencia">Como funciona</a><a href="#sobre">Sobre</a><a href="#duvidas">Dúvidas</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">◐</button>
+    <a class="btn btn-primary" href="#conversar">Agendar sessão</a>
+  </nav>
+</div></header>
+
+<main id="topo">
+  <section class="hero on-deep">
+    <video class="hero-video" src="media/hero.mp4" poster="media/hero-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span></div>
+    <div class="wrap"><div class="hero-grid">
+      <div>
+        <a class="ig-selo" href="https://www.instagram.com/starholistico/" target="_blank" rel="noopener"><img src="assets/avatar.jpg" alt="Foto de perfil do Star Holístico no Instagram" width="34" height="34"><span>@starholistico · <b>conta real</b></span></a>
+        <span class="eyebrow">Terapias holísticas & autocuidado</span>
+        <h1>Equilíbrio começa quando você <em>se escuta.</em></h1>
+        <p class="lede">Um espaço de acolhimento pra desacelerar, entender o que o corpo pede e reencontrar o seu centro.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#conversar">Agendar uma sessão</a>
+          <a class="btn btn-ghost" href="#terapias">Conhecer as terapias</a>
+        </div>
+        <p class="hero-trust"><span class="dot"></span> Atendimento acolhedor <span class="dot"></span> Sem julgamento <span class="dot"></span> No seu tempo</p>
+      </div>
+      <div class="portrait"><div class="portrait-frame">
+        <img class="portrait-img" src="assets/portrait.webp" alt="Ambiente de bem-estar e terapias holísticas do Star Holístico" width="1100" height="1375">
+      </div></div>
+    </div></div>
+  </section>
+
+  <section class="section"><div class="wrap">
+    <div class="head-block reveal">
+      <span class="eyebrow">Talvez você se reconheça</span>
+      <h2>Você cuida de todo mundo. E de você, quem cuida?</h2>
+      <p class="muted">Parar pra se cuidar não é egoísmo. É o que sustenta o resto.</p>
+    </div>
+    <div class="grid-3">
+      <div class="scenario reveal"><span class="q">“</span><p>Ando no automático, sem tempo pra mim.</p></div>
+      <div class="scenario reveal"><span class="q">“</span><p>A ansiedade tem tomado conta dos meus dias.</p></div>
+      <div class="scenario reveal"><span class="q">“</span><p>Sinto que preciso me reconectar comigo mesma.</p></div>
+    </div>
+  </div></section>
+
+  <section class="band section on-deep"><div class="wrap reveal">
+    <span class="eyebrow">A base de tudo</span>
+    <h2>Cuidar de si não é luxo. É <em>base.</em></h2>
+    <p>Quando a gente se escuta, o corpo relaxa e a mente clareia. As terapias holísticas não substituem a medicina: elas caminham junto, criando um espaço pra você respirar, se acolher e voltar pro seu eixo.</p>
+  </div></section>
+
+  <section class="section" id="terapias"><div class="wrap">
+    <div class="head-block reveal"><span class="eyebrow">Os caminhos</span><h2>Três formas de voltar pro seu centro.</h2></div>
+    <div class="grid-3">
+      <div class="card reveal"><span class="num">Terapias</span><h3>Cuidado do corpo</h3><p class="muted">Práticas de relaxamento e reequilíbrio que aliviam a tensão e trazem o corpo de volta pro presente.</p></div>
+      <div class="card reveal"><span class="num">Autoconhecimento</span><h3>Escuta e clareza</h3><p class="muted">Um espaço seguro pra olhar pra dentro, entender seus padrões e enxergar o próximo passo com mais calma.</p></div>
+      <div class="card reveal"><span class="num">Práticas & rituais</span><h3>Bem-estar no dia a dia</h3><p class="muted">Respiração, meditação e pequenos rituais que você leva pra vida, além da sessão.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section" id="experiencia" style="padding-top:0"><div class="wrap">
+    <div class="head-block reveal"><span class="eyebrow">Como funciona</span><h2>Um cuidado no seu tempo</h2>
+      <p class="muted">Sem pressa e sem cobrança. Do seu jeito.</p></div>
+    <div class="steps reveal">
+      <div class="step"><div class="n">01</div><h3>Acolhida</h3><p>A gente se conhece e você conta o que está pedindo cuidado agora.</p></div>
+      <div class="step"><div class="n">02</div><h3>Escuta</h3><p>Entendo o seu momento pra escolher a prática que faz sentido pra você.</p></div>
+      <div class="step"><div class="n">03</div><h3>Sessão</h3><p>Um tempo só seu, num espaço seguro, pra relaxar e se reequilibrar.</p></div>
+      <div class="step"><div class="n">04</div><h3>Continuidade</h3><p>Você sai com práticas simples pra levar o cuidado pro dia a dia.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section" style="padding-top:0"><div class="wrap"><div class="grid-2">
+    <div class="head-block reveal" style="margin-bottom:0">
+      <span class="eyebrow">Antes da sua sessão</span><h2>Três perguntas pra gente começar bem.</h2>
+      <p class="muted">Não precisa ter resposta pronta. A gente descobre juntas.</p>
+    </div>
+    <div class="checks">
+      <div class="check reveal"><span class="ico">?</span><p>O que você sente que mais precisa de cuidado agora?</p></div>
+      <div class="check reveal"><span class="ico">?</span><p>Prefere um atendimento presencial ou online?</p></div>
+      <div class="check reveal"><span class="ico">?</span><p>Como tem sido o seu sono, a sua energia e o seu humor?</p></div>
+    </div>
+  </div></div></section>
+
+  <section class="lifeband" id="leve">
+    <video class="lifeband-bg" src="media/band.mp4" poster="media/band-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+    <div class="lifeband-veil" aria-hidden="true"></div>
+    <div class="wrap"><div class="lifeband-inner reveal">
+      <span class="eyebrow" style="color:var(--gold-soft)">Respira</span>
+      <h2>Você merece esse <em>cuidado.</em></h2>
+      <p>Um tempo só seu pra desacelerar faz mais diferença do que parece. O corpo agradece, a mente descansa e a vida fica mais leve de carregar.</p>
+      <a class="btn btn-primary" href="#conversar">Reservar meu tempo</a>
+    </div></div>
+  </section>
+
+  <section class="section" id="sobre"><div class="wrap about">
+    <div class="about-card reveal">
+      <span class="mono">SH</span>
+      <p style="margin-top:.5em; color:var(--deep-fg)">Aqui é o Star Holístico. Um espaço pra você se reencontrar.</p>
+      <ul>
+        <li>Terapias holísticas e práticas de bem-estar</li>
+        <li>Atendimento acolhedor, sem julgamento</li>
+        <li>Foco em equilíbrio, autoconhecimento e calma</li>
+        <li>Sessões presenciais e online</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Quem acolhe você</span>
+      <h2 style="font-size:clamp(1.8rem,1.3rem + 2vw,2.8rem); margin:.3em 0 .5em">Menos correria. Mais presença.</h2>
+      <p class="muted lead-2">Eu acredito num cuidado que respeita o seu tempo e a sua história. Aqui não tem fórmula mágica nem promessa fácil: tem escuta de verdade, acolhimento e um espaço seguro pra você se reconectar com o que importa.</p>
+    </div>
+  </div></section>
+
+  <section class="section" id="duvidas" style="padding-top:0"><div class="wrap">
+    <div class="head-block reveal"><span class="eyebrow">Dúvidas honestas</span><h2>O que as pessoas costumam perguntar.</h2></div>
+    <div class="faq reveal">
+      <details><summary>O que é terapia holística? <span class="plus">+</span></summary><p>É um cuidado que olha para você por inteiro — corpo, mente e emoções. Ela caminha junto com a medicina, nunca no lugar dela.</p></details>
+      <details><summary>Atende presencial ou online? <span class="plus">+</span></summary><p>Os dois. A gente combina o formato que for mais confortável e possível pra você.</p></details>
+      <details><summary>Preciso acreditar em algo específico? <span class="plus">+</span></summary><p>Não. Você não precisa ter nenhuma crença pra se beneficiar. É só chegar com abertura pra se cuidar.</p></details>
+      <details><summary>É a minha primeira vez, como funciona? <span class="plus">+</span></summary><p>A gente começa com uma conversa de acolhida, sem pressa, pra entender o seu momento. Você guia o ritmo.</p></details>
+      <details><summary>Quanto custa uma sessão? <span class="plus">+</span></summary><p>Me chama que eu explico os valores e como agendar, com todo o cuidado e transparência.</p></details>
+    </div>
+  </div></section>
+
+  <section class="band section on-deep" id="conversar"><div class="wrap"><div class="about" style="align-items:start">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--gold-soft)">O próximo passo</span>
+      <h2 style="font-size:clamp(2rem,1.4rem + 3vw,3.4rem)">Dê a si mesma um tempo de <em>cuidado.</em></h2>
+      <p style="color:var(--deep-muted); margin-top:1.2em; max-width:40ch">Deixa seu contato ou chama direto no Instagram. Vamos encontrar o cuidado certo pro seu momento.</p>
+    </div>
+    <div class="form-wrap reveal">
+      <span class="demo-pill">● Modo demonstração</span>
+      <form id="leadForm" novalidate>
+        <div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como você quer ser chamada(o)" required></div>
+        <div class="field"><label for="zap">WhatsApp</label><input id="zap" name="zap" type="tel" autocomplete="tel" placeholder="(51) 9 0000-0000" required></div>
+        <div class="field"><label for="motivo">O que te traz aqui?</label>
+          <select id="motivo" name="motivo">
+            <option value="ansiedade">Ansiedade / estresse</option><option value="autoconhecimento">Autoconhecimento</option>
+            <option value="tensao">Dores / tensão no corpo</option><option value="conversar">Só quero conversar</option>
+          </select></div>
+        <label class="consent"><input id="consent" type="checkbox" required> Concordo em ser contatada(o) sobre o meu agendamento.</label>
+        <div style="margin-top:18px"><button class="btn btn-primary" type="submit" style="width:100%">Agendar com o Star Holístico</button></div>
+        <p class="form-note">Prévia de demonstração: nenhum dado é enviado ou armazenado.</p>
+      </form>
+      <div class="form-ok" id="formOk"><b style="font-family:'Fraunces';font-size:1.2rem">Recebi por aqui. ✦</b>
+        <p style="color:var(--deep-muted);margin-top:.5em">Nesta prévia é só demonstração. Em produção, a sua mensagem chega direto pro Star Holístico e vira uma conversa.</p></div>
+    </div>
+  </div></div></section>
+</main>
+
+<footer class="footer"><div class="wrap"><div class="cols">
+  <div>
+    <a class="brand" href="#topo" style="color:var(--deep-fg)"><span class="mono">SH</span> Star Holístico</a>
+    <p style="color:var(--deep-muted); margin-top:1em; max-width:34ch">Terapias holísticas e bem-estar num espaço de acolhimento. Cuidado no seu tempo.</p>
+  </div>
+  <div><h4>Conteúdo</h4>
+    <a href="https://www.instagram.com/starholistico/" target="_blank" rel="noopener">Instagram @starholistico</a>
+    <a href="#terapias">Ver as terapias</a></div>
+  <div><h4>Falar com a gente</h4>
+    <span class="copytext" data-copy="Fale com o Star Holístico pelo Instagram @starholistico">Copiar contato</span>
+    <a href="#conversar">Agendar sessão</a></div>
+</div>
+<div class="copy"><span>Prévia criada pela ANi | Alquimia Digital · demonstração, não indexada.</span><span>Formulário e botões em modo demonstração.</span></div>
+</div></footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var root = document.documentElement, tglt = document.getElementById("themeToggle");
+  try{ var saved = localStorage.getItem("star-theme"); if(saved) root.setAttribute("data-theme", saved); }catch(e){}
+  if(tglt){ tglt.addEventListener("click", function(){
+    var cur = root.getAttribute("data-theme");
+    var isDark = cur ? cur === "dark" : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    var next = isDark ? "light" : "dark"; root.setAttribute("data-theme", next);
+    try{ localStorage.setItem("star-theme", next); }catch(e){}
+  }); }
+  if(reduce){ document.querySelectorAll("video").forEach(function(v){ v.removeAttribute("autoplay"); v.autoplay=false; try{ v.pause(); }catch(e){} }); }
+  if(!reduce && "IntersectionObserver" in window){
+    document.body.classList.add("js-reveal");
+    var io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } }); }, {threshold:.14, rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  }
+  var form = document.getElementById("leadForm"), ok = document.getElementById("formOk");
+  if(form){ form.addEventListener("submit", function(e){ e.preventDefault(); if(!form.checkValidity()){ form.reportValidity(); return; } form.style.display="none"; if(ok){ ok.classList.add("show"); ok.scrollIntoView({behavior: reduce?"auto":"smooth", block:"center"}); } }); }
+  document.querySelectorAll(".copytext").forEach(function(el){ el.addEventListener("click", function(){ var txt = el.getAttribute("data-copy") || el.textContent; var done=function(){ var o=el.textContent; el.textContent="Copiado ✓"; setTimeout(function(){ el.textContent=o; },1600); }; if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done).catch(done);} else{ done(); } }); });
+})();
+</script>
+</body></html>
