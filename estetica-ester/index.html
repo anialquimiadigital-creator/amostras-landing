@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2A1E27">
+<title>Ester Guedes · Estética & Autoestima</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Estética e autoestima com técnica, segurança e um atendimento que te escuta. Cuidado da pele e do corpo, no seu tempo.">
+<meta property="og:title" content="Ester Guedes · Cuidar de você também é autoestima">
+<meta property="og:description" content="Estética e autoestima com técnica e acolhimento.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#FAF5F2; --surface:#FFFFFF; --ink:#241C21; --muted:#6E5F64;
+  --line:rgba(36,28,33,.12); --gold:#A65A5F; --gold-soft:#E7C4CC;
+  --deep:#2A1E27; --deep-2:#1C131A; --deep-fg:#F3E9EA; --deep-muted:#C9B4BB;
+  --deep-line:rgba(243,233,234,.16);
+  --radius:20px; --maxw:1080px; --step:clamp(1rem,.6rem + 1.4vw,1.25rem); color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#130F12; --surface:#1C151A; --ink:#F0E7EA; --muted:#B2A4A9;
+  --line:rgba(240,231,234,.14); --gold:#DA8E97; --gold-soft:#EBC7CE;
+  --deep:#241820; --deep-2:#150E13; --deep-fg:#F3E9EA; --deep-muted:#C3AEB5;
+  --deep-line:rgba(243,233,234,.16); color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#130F12; --surface:#1C151A; --ink:#F0E7EA; --muted:#B2A4A9;
+  --line:rgba(240,231,234,.14); --gold:#DA8E97; --gold-soft:#EBC7CE;
+  --deep:#241820; --deep-2:#150E13; --deep-fg:#F3E9EA; --deep-muted:#C3AEB5;
+  --deep-line:rgba(243,233,234,.16); color-scheme:dark;}
+
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink); font-family:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:var(--step); line-height:1.6; margin:0; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+h1,h2,h3,.display{font-family:"Fraunces","Georgia",serif; font-weight:500; line-height:1.06; text-wrap:balance; letter-spacing:-.01em}
+p{margin:0} a{color:inherit} img{max-width:100%; display:block}
+.wrap{max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(16px,5vw,40px)}
+.eyebrow{font-size:.74rem; letter-spacing:.2em; text-transform:uppercase; font-weight:600; color:var(--gold)}
+.muted{color:var(--muted)} .section{padding-block:clamp(56px,9vw,116px)}
+.btn{display:inline-flex; align-items:center; gap:.5em; font-family:"Figtree"; font-weight:600; font-size:1rem;
+  padding:.85em 1.5em; border-radius:999px; border:1px solid transparent; cursor:pointer; text-decoration:none;
+  transition:transform .25s ease, background .25s ease, box-shadow .25s ease}
+.btn:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+.btn-primary{background:var(--gold); color:#fff; box-shadow:0 12px 32px -12px rgba(166,90,95,.7)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent; border-color:var(--line); color:inherit}
+.btn-ghost:hover{border-color:var(--gold); color:var(--gold)}
+.on-deep .btn-ghost{border-color:var(--deep-line); color:var(--deep-fg)}
+.on-deep .btn-ghost:hover{border-color:var(--gold-soft); color:var(--gold-soft)}
+.topbar{position:sticky; top:env(safe-area-inset-top,0px); z-index:40; backdrop-filter:blur(10px);
+  background:color-mix(in srgb,var(--bg) 82%,transparent); border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex; align-items:center; justify-content:space-between; padding-block:14px}
+.brand{display:flex; align-items:center; gap:.6em; font-family:"Fraunces"; font-weight:600; font-size:1.12rem; text-decoration:none}
+.brand .mono{display:grid; place-items:center; width:36px; height:36px; border-radius:50%; background:var(--deep); color:var(--gold-soft); font-size:.82rem; letter-spacing:.04em}
+.nav{display:flex; align-items:center; gap:clamp(14px,2.5vw,30px)}
+.nav a{text-decoration:none; font-size:.95rem; color:var(--muted)} .nav a:hover{color:var(--ink)} .nav .btn{padding:.6em 1.1em}
+.nav-links{display:none} @media(min-width:820px){.nav-links{display:flex; gap:26px}}
+.theme-toggle{background:transparent; border:1px solid var(--line); color:var(--muted); width:38px; height:38px; border-radius:50%; cursor:pointer; font-size:1rem; display:grid; place-items:center}
+.theme-toggle:hover{color:var(--gold); border-color:var(--gold)}
+/* HERO invertido: imagem/video a esquerda, texto a direita */
+.hero{position:relative; overflow:hidden; background:var(--bg)}
+.hero .wrap{padding-block:clamp(40px,7vw,84px)}
+.hero-grid{display:grid; gap:clamp(28px,5vw,60px); grid-template-columns:1fr; align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:.95fr 1.05fr}}
+.hero-media{position:relative; border-radius:28px; overflow:hidden; aspect-ratio:4/5; min-height:340px;
+  border:1px solid var(--line); box-shadow:0 40px 90px -46px rgba(60,30,40,.5)}
+.hero-media video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.hero-media .grad{position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(42,30,39,.5))}
+.hero-media .float{position:absolute; left:18px; bottom:18px; z-index:2; background:color-mix(in srgb,var(--surface) 92%,transparent);
+  color:var(--ink); border-radius:14px; padding:.7em 1em; font-size:.82rem; box-shadow:0 20px 44px -22px rgba(0,0,0,.5)}
+.hero-media .float b{font-family:"Fraunces"; color:var(--gold)}
+.hero h1{font-size:clamp(2.5rem,1.3rem + 5.2vw,4.6rem); margin:.3em 0 .5em}
+.hero h1 em{font-style:italic; color:var(--gold)}
+.hero .lede{font-size:clamp(1.05rem,.95rem + .5vw,1.28rem); color:var(--muted); max-width:40ch}
+.hero-cta{display:flex; flex-wrap:wrap; gap:14px; margin-top:2em}
+.hero-trust{margin-top:2em; font-size:.9rem; color:var(--muted); display:flex; gap:.7em; flex-wrap:wrap; align-items:center}
+.dot{width:6px; height:6px; border-radius:50%; background:var(--gold); display:inline-block}
+.head-block{max-width:38ch; margin-bottom:2.4em} .head-block h2{font-size:clamp(1.9rem,1.3rem + 2.4vw,3.1rem); margin:.25em 0 .5em}
+.grid-3{display:grid; gap:20px; grid-template-columns:1fr} @media(min-width:720px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.grid-2{display:grid; gap:24px; grid-template-columns:1fr} @media(min-width:840px){.grid-2{grid-template-columns:1fr 1fr; align-items:center}}
+.soft{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:26px}
+.soft h3{font-size:1.25rem; margin:.1em 0 .4em} .soft .k{font-family:"Fraunces"; color:var(--gold); font-weight:600; font-size:.9rem}
+.soft p{color:var(--muted); font-size:.98rem}
+/* CARDAPIO de cuidados (lista com pontilhado) */
+.menu{border-top:1px solid var(--line)}
+.menu .row{display:grid; grid-template-columns:1fr auto; gap:.6em 1.2em; align-items:baseline; padding:22px 0; border-bottom:1px solid var(--line)}
+.menu .row h3{font-size:1.3rem; margin:0} .menu .row .tag{color:var(--gold); font-size:.82rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap}
+.menu .row p{grid-column:1/-1; color:var(--muted); font-size:.98rem; margin-top:.2em; max-width:60ch}
+/* BANDA DE DEPOIMENTO (quebra de padrao) */
+.qband{position:relative; overflow:hidden; background:var(--deep); color:var(--deep-fg)}
+.qband::before{content:""; position:absolute; inset:0; opacity:.5; background:radial-gradient(60% 90% at 20% 10%,rgba(218,142,151,.3),transparent 60%),radial-gradient(50% 80% at 90% 90%,rgba(231,196,204,.2),transparent 60%)}
+.qband .wrap{position:relative; z-index:2; text-align:center; max-width:760px}
+.qband .mark{font-family:"Fraunces"; font-size:4rem; line-height:.6; color:var(--gold-soft)}
+.qband blockquote{font-family:"Fraunces"; font-weight:500; font-size:clamp(1.6rem,1.1rem + 2.4vw,2.8rem); margin:.2em 0 .6em; line-height:1.2}
+.qband cite{font-style:normal; color:var(--deep-muted); font-size:.95rem}
+.steps3{display:grid; gap:18px; grid-template-columns:1fr} @media(min-width:800px){.steps3{grid-template-columns:repeat(3,1fr)}}
+.stp{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:26px}
+.stp .n{font-family:"Fraunces"; font-size:2.2rem; color:var(--gold); line-height:1}
+.stp h3{font-size:1.2rem; margin:.4em 0 .3em} .stp p{color:var(--muted); font-size:.96rem}
+.lifeband{position:relative; overflow:hidden; min-height:min(70vh,560px); display:grid; align-items:center; isolation:isolate}
+.lifeband-bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0}
+.lifeband-veil{position:absolute; inset:0; z-index:1; background:linear-gradient(90deg,rgba(28,19,26,.92) 0%,rgba(28,19,26,.74) 44%,rgba(28,19,26,.28) 100%)}
+@media(max-width:640px){.lifeband-veil{background:linear-gradient(180deg,rgba(28,19,26,.6),rgba(28,19,26,.92))}}
+.lifeband .wrap{position:relative; z-index:2; padding-block:clamp(56px,10vw,104px)}
+.lifeband-inner{max-width:34ch; color:var(--deep-fg)}
+.lifeband-inner h2{font-size:clamp(2rem,1.4rem + 3vw,3.4rem); margin:.25em 0 .5em} .lifeband-inner h2 em{font-style:italic; color:var(--gold-soft)}
+.lifeband-inner p{color:var(--deep-muted); font-size:1.06rem; margin-bottom:1.5em}
+.about{display:grid; gap:clamp(28px,5vw,56px); grid-template-columns:1fr} @media(min-width:860px){.about{grid-template-columns:1.05fr .95fr; align-items:center}}
+.about-photo{border-radius:24px; overflow:hidden; aspect-ratio:4/5; border:1px solid var(--line); box-shadow:0 30px 70px -40px rgba(60,30,40,.5)}
+.about-photo img{width:100%; height:100%; object-fit:cover}
+.faq{display:grid; gap:12px; max-width:760px}
+details{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:2px 20px} details[open]{border-color:var(--gold)}
+summary{cursor:pointer; padding:18px 0; font-family:"Fraunces"; font-size:1.12rem; list-style:none; display:flex; justify-content:space-between; gap:1em; align-items:center}
+summary::-webkit-details-marker{display:none} summary .plus{color:var(--gold); font-size:1.3rem; transition:transform .2s ease}
+details[open] summary .plus{transform:rotate(45deg)} details p{color:var(--muted); padding:0 0 20px}
+.form-wrap{background:var(--surface); border:1px solid var(--line); border-radius:24px; padding:clamp(24px,4vw,40px)}
+.field{display:grid; gap:.4em; margin-bottom:16px} .field label{font-size:.85rem; font-weight:600}
+.field input,.field select{font-family:inherit; font-size:1rem; padding:.8em .9em; border-radius:12px; border:1px solid var(--line); background:var(--bg); color:var(--ink)}
+.field input:focus,.field select:focus{outline:2px solid var(--gold); outline-offset:1px; border-color:var(--gold)}
+.consent{display:flex; gap:.6em; align-items:flex-start; font-size:.85rem; color:var(--muted)} .consent input{margin-top:.2em}
+.form-note{margin-top:14px; font-size:.85rem; color:var(--muted)}
+.form-ok{display:none; background:var(--deep); color:var(--deep-fg); border-radius:16px; padding:22px; margin-top:16px} .form-ok.show{display:block}
+.demo-pill{display:inline-flex; align-items:center; gap:.5em; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); border:1px solid var(--line); border-radius:999px; padding:.4em .8em; margin-bottom:1.2em}
+.cta-final{background:var(--surface); border:1px solid var(--line); border-radius:28px; padding:clamp(28px,5vw,56px)}
+.footer{background:var(--deep-2); color:var(--deep-fg); padding-block:56px 40px}
+.footer .cols{display:grid; gap:30px; grid-template-columns:1fr} @media(min-width:720px){.footer .cols{grid-template-columns:1.4fr 1fr 1fr}}
+.footer a{color:var(--deep-muted); text-decoration:none; display:block; padding:.25em 0} .footer a:hover{color:var(--gold-soft)}
+.footer h4{font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-soft); margin:0 0 .8em}
+.footer .copy{margin-top:34px; padding-top:22px; border-top:1px solid var(--deep-line); font-size:.82rem; color:var(--deep-muted); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap}
+.copytext{cursor:pointer; text-decoration:underline dotted; text-underline-offset:3px}
+body.js-reveal .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)}
+body.js-reveal .reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){.qband::before{animation:none!important} *{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="#topo"><span class="mono">EG</span> Ester Guedes</a>
+  <nav class="nav" aria-label="Principal">
+    <div class="nav-links"><a href="#cuidados">Cuidados</a><a href="#experiencia">Como funciona</a><a href="#sobre">Sobre</a><a href="#duvidas">Dúvidas</a></div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">◐</button>
+    <a class="btn btn-primary" href="#conversar">Agendar avaliação</a>
+  </nav>
+</div></header>
+
+<main id="topo">
+  <section class="hero">
+    <div class="wrap"><div class="hero-grid">
+      <div class="hero-media reveal">
+        <video src="media/hero.mp4" poster="media/hero-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+        <div class="grad" aria-hidden="true"></div>
+        <div class="float"><b>Avaliação personalizada</b><br><span class="muted">o cuidado começa te escutando</span></div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Estética avançada & autoestima</span>
+        <h1>Cuidar de você também é <em>autoestima.</em></h1>
+        <p class="lede">Um espaço pra você olhar no espelho e gostar do que vê. Procedimentos com técnica e segurança, num atendimento que te escuta antes de tudo.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#conversar">Agendar avaliação</a>
+          <a class="btn btn-ghost" href="#cuidados">Ver os cuidados</a>
+        </div>
+        <p class="hero-trust"><span class="dot"></span> Avaliação personalizada <span class="dot"></span> Técnica e segurança <span class="dot"></span> Sem promessa milagrosa</p>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section"><div class="wrap">
+    <div class="head-block reveal">
+      <span class="eyebrow">Talvez você se reconheça</span>
+      <h2>Você se cobra no espelho e adia o próprio cuidado.</h2>
+      <p class="muted">Cuidar da pele e do corpo não é vaidade. É como você se trata.</p>
+    </div>
+    <div class="grid-3">
+      <div class="soft reveal"><span class="k">“</span><h3 style="font-family:Figtree;font-weight:600;font-size:1.05rem">Não me sinto à vontade nas fotos ultimamente.</h3></div>
+      <div class="soft reveal"><span class="k">“</span><h3 style="font-family:Figtree;font-weight:600;font-size:1.05rem">Tenho medo de procedimento que promete demais.</h3></div>
+      <div class="soft reveal"><span class="k">“</span><h3 style="font-family:Figtree;font-weight:600;font-size:1.05rem">Queria um lugar que me escutasse antes de vender.</h3></div>
+    </div>
+  </div></section>
+
+  <section class="qband section"><div class="wrap reveal">
+    <div class="mark" aria-hidden="true">“</div>
+    <blockquote>Saí de lá me sentindo cuidada de verdade, não só mais uma cliente.</blockquote>
+    <cite>depoimento ilustrativo, para a versão final entra a fala real de uma cliente</cite>
+  </div></section>
+
+  <section class="section" id="cuidados"><div class="wrap">
+    <div class="head-block reveal"><span class="eyebrow">Os cuidados</span><h2>Um cardápio de cuidados, pensado pra você.</h2>
+      <p class="muted">O que combina com a sua pele e o seu momento a gente define juntas na avaliação.</p></div>
+    <div class="menu reveal">
+      <div class="row"><h3>Cuidados com a pele</h3><span class="tag">Facial</span><p>Limpeza, hidratação e revitalização para uma pele mais saudável e viçosa.</p></div>
+      <div class="row"><h3>Corpo & bem-estar</h3><span class="tag">Corporal</span><p>Cuidados que ajudam você a se sentir bem no próprio corpo, com conforto e leveza.</p></div>
+      <div class="row"><h3>Realce natural</h3><span class="tag">Autoestima</span><p>Valorizar o que você já tem, respeitando a sua beleza, sem exageros nem padrões.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section" id="experiencia" style="padding-top:0"><div class="wrap">
+    <div class="head-block reveal"><span class="eyebrow">Como funciona</span><h2>Do primeiro oi ao seu brilho</h2></div>
+    <div class="steps3 reveal">
+      <div class="stp"><div class="n">01</div><h3>Avaliação</h3><p>A gente conversa, eu escuto o seu objetivo e avalio a sua pele com calma.</p></div>
+      <div class="stp"><div class="n">02</div><h3>Plano de cuidado</h3><p>Monto um caminho no seu ritmo, com o que faz sentido pra você, sem empurrar nada.</p></div>
+      <div class="stp"><div class="n">03</div><h3>Acompanhamento</h3><p>A gente acompanha os resultados no tempo certo, ajustando sempre que precisar.</p></div>
+    </div>
+  </div></section>
+
+  <section class="lifeband" id="leve">
+    <video class="lifeband-bg" src="media/band.mp4" poster="media/band-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+    <div class="lifeband-veil" aria-hidden="true"></div>
+    <div class="wrap"><div class="lifeband-inner reveal">
+      <span class="eyebrow" style="color:var(--gold-soft)">Se sentir bem</span>
+      <h2>Quando você se cuida, isso <em>aparece por inteiro.</em></h2>
+      <p>Autoestima não vem de um padrão. Vem de se sentir bem consigo. Meu trabalho é te ajudar nesse cuidado, com verdade e sem pressa.</p>
+      <a class="btn btn-primary" href="#conversar">Quero me cuidar</a>
+    </div></div>
+  </section>
+
+  <section class="section" id="sobre"><div class="wrap about">
+    <div class="about-photo reveal"><img src="assets/portrait.webp" alt="Espaço de estética e cuidado com a pele de Ester Guedes" width="1100" height="1375"></div>
+    <div class="reveal">
+      <span class="eyebrow">Quem cuida de você</span>
+      <h2 style="font-size:clamp(1.8rem,1.3rem + 2vw,2.8rem); margin:.3em 0 .5em">Técnica que traz resultado, cuidado que traz confiança.</h2>
+      <p class="muted" style="max-width:52ch">Eu acredito numa estética que respeita você. Nada de prometer o impossível ou te fazer sentir que precisa mudar tudo. Aqui a gente cuida com técnica, segurança e um olhar que valoriza a sua beleza no seu tempo.</p>
+    </div>
+  </div></section>
+
+  <section class="section" id="duvidas" style="padding-top:0"><div class="wrap">
+    <div class="head-block reveal"><span class="eyebrow">Dúvidas honestas</span><h2>O que as clientes costumam perguntar.</h2></div>
+    <div class="faq reveal">
+      <details><summary>Como funciona a primeira vez? <span class="plus">+</span></summary><p>Começa com uma avaliação, sem compromisso de fechar nada. Eu entendo o seu objetivo e a sua pele antes de sugerir qualquer cuidado.</p></details>
+      <details><summary>Vocês prometem resultado rápido? <span class="plus">+</span></summary><p>Não trabalho com promessa milagrosa. Resultado de verdade vem com técnica, constância e respeito ao seu tempo. Eu te explico o que esperar.</p></details>
+      <details><summary>É seguro? <span class="plus">+</span></summary><p>Sim. Trabalho com técnica, higiene e cuidado em cada etapa. Qualquer dúvida, a gente conversa antes.</p></details>
+      <details><summary>Preciso já saber o que quero fazer? <span class="plus">+</span></summary><p>Não. Você pode chegar só com o incômodo ou o desejo. Na avaliação a gente descobre o melhor caminho juntas.</p></details>
+      <details><summary>Como agendo e quais os valores? <span class="plus">+</span></summary><p>Me chama que eu explico a agenda e os valores com transparência, do jeito que couber pra você.</p></details>
+    </div>
+  </div></section>
+
+  <section class="section" id="conversar"><div class="wrap"><div class="cta-final"><div class="grid-2">
+    <div class="reveal">
+      <span class="eyebrow">O próximo passo</span>
+      <h2 style="font-size:clamp(2rem,1.4rem + 3vw,3.2rem); margin:.2em 0 .4em">Reserve um tempo pra <em style="color:var(--gold);font-style:italic">se cuidar.</em></h2>
+      <p class="muted" style="max-width:40ch">Deixa seu contato ou chama direto no Instagram. Vou adorar te receber e cuidar de você.</p>
+    </div>
+    <div class="form-wrap reveal">
+      <span class="demo-pill">● Modo demonstração</span>
+      <form id="leadForm" novalidate>
+        <div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como você quer ser chamada(o)" required></div>
+        <div class="field"><label for="zap">WhatsApp</label><input id="zap" name="zap" type="tel" autocomplete="tel" placeholder="(51) 9 0000-0000" required></div>
+        <div class="field"><label for="motivo">O que você gostaria de cuidar?</label>
+          <select id="motivo" name="motivo"><option value="pele">Cuidados com a pele</option><option value="corpo">Corpo & bem-estar</option><option value="autoestima">Autoestima / realce natural</option><option value="avaliar">Ainda não sei, quero avaliar</option></select></div>
+        <label class="consent"><input id="consent" type="checkbox" required> Concordo em ser contatada(o) sobre o meu agendamento.</label>
+        <div style="margin-top:18px"><button class="btn btn-primary" type="submit" style="width:100%">Agendar avaliação</button></div>
+        <p class="form-note">Prévia de demonstração: nenhum dado é enviado ou armazenado.</p>
+      </form>
+      <div class="form-ok" id="formOk"><b style="font-family:'Fraunces';font-size:1.2rem">Recebi por aqui. ✦</b>
+        <p style="color:var(--deep-muted);margin-top:.5em">Nesta prévia é só demonstração. Em produção, a sua mensagem chega direto pra Ester.</p></div>
+    </div>
+  </div></div></div></section>
+</main>
+
+<footer class="footer"><div class="wrap"><div class="cols">
+  <div>
+    <a class="brand" href="#topo" style="color:var(--deep-fg)"><span class="mono">EG</span> Ester Guedes</a>
+    <p style="color:var(--deep-muted); margin-top:1em; max-width:34ch">Estética e autoestima com técnica, segurança e acolhimento. Cuidado de verdade, no seu tempo.</p>
+  </div>
+  <div><h4>Conteúdo</h4>
+    <a href="https://www.instagram.com/esterguedes.estetica/" target="_blank" rel="noopener">Instagram @esterguedes.estetica</a>
+    <a href="#cuidados">Ver os cuidados</a></div>
+  <div><h4>Agendar</h4>
+    <span class="copytext" data-copy="Fale com a Ester pelo Instagram @esterguedes.estetica">Copiar contato</span>
+    <a href="#conversar">Agendar avaliação</a></div>
+</div>
+<div class="copy"><span>Prévia criada pela ANi | Alquimia Digital · demonstração, não indexada.</span><span>Imagens de referência. Depoimento ilustrativo. Trocar pelas reais na versão final.</span></div>
+</div></footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var root = document.documentElement, tglt = document.getElementById("themeToggle");
+  try{ var saved = localStorage.getItem("ester-theme"); if(saved) root.setAttribute("data-theme", saved); }catch(e){}
+  if(tglt){ tglt.addEventListener("click", function(){
+    var cur = root.getAttribute("data-theme");
+    var isDark = cur ? cur === "dark" : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    var next = isDark ? "light" : "dark"; root.setAttribute("data-theme", next);
+    try{ localStorage.setItem("ester-theme", next); }catch(e){}
+  }); }
+  if(reduce){ document.querySelectorAll("video").forEach(function(v){ v.removeAttribute("autoplay"); v.autoplay=false; try{ v.pause(); }catch(e){} }); }
+  if(!reduce && "IntersectionObserver" in window){
+    document.body.classList.add("js-reveal");
+    var io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } }); }, {threshold:.14, rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  }
+  var form = document.getElementById("leadForm"), ok = document.getElementById("formOk");
+  if(form){ form.addEventListener("submit", function(e){ e.preventDefault(); if(!form.checkValidity()){ form.reportValidity(); return; } form.style.display="none"; if(ok){ ok.classList.add("show"); ok.scrollIntoView({behavior: reduce?"auto":"smooth", block:"center"}); } }); }
+  document.querySelectorAll(".copytext").forEach(function(el){ el.addEventListener("click", function(){ var txt = el.getAttribute("data-copy") || el.textContent; var done=function(){ var o=el.textContent; el.textContent="Copiado ✓"; setTimeout(function(){ el.textContent=o; },1600); }; if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done).catch(done);} else{ done(); } }); });
+})();
+</script>
+</body></html>

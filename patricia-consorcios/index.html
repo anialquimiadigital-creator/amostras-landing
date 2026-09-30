@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0A0F1C">
+<title>Patrícia · Consórcios</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Realize seu carro ou imóvel sem os juros de um financiamento. Consórcio planejado, com transparência e acompanhamento de verdade.">
+<meta property="og:title" content="Patrícia · Consórcios — Seu bem sem o peso dos juros">
+<meta property="og:description" content="Consórcio planejado, sem os juros do financiamento, com transparência.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#0A0F1C; --bg-2:#0E1526; --surface:#121A2E; --surface-2:#16203A;
+  --ink:#EAF0FF; --muted:#93A1C2; --line:rgba(255,255,255,.10);
+  --accent:#6C8CFF; --accent-2:#3DD6A8; --accent-ink:#08122a;
+  --danger:#FF7A7A;
+  --maxw:1120px; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:"Inter",system-ui,sans-serif;
+  font-size:clamp(1rem,.62rem + 1.1vw,1.15rem); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+h1,h2,h3,.disp{font-family:"Space Grotesk","Inter",sans-serif; font-weight:600; line-height:1.02; letter-spacing:-.02em; text-wrap:balance; margin:0}
+p{margin:0} a{color:inherit; text-decoration:none} img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(18px,5vw,44px)}
+.section{padding-block:clamp(64px,10vw,128px)}
+.eyebrow{display:inline-flex; align-items:center; gap:.6em; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--accent-2)}
+.eyebrow::before{content:""; width:22px; height:1px; background:var(--accent-2)}
+.muted{color:var(--muted)}
+.btn{display:inline-flex; align-items:center; gap:.55em; font-family:"Space Grotesk"; font-weight:600; font-size:1rem;
+  padding:.9em 1.5em; border-radius:12px; border:1px solid transparent; cursor:pointer; transition:transform .2s, box-shadow .2s, background .2s, border-color .2s}
+.btn:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#8AA0FF); color:#0a1230; box-shadow:0 14px 40px -14px rgba(108,140,255,.7)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent; border-color:var(--line); color:var(--ink)}
+.btn-ghost:hover{border-color:var(--accent); color:#fff}
+/* header */
+.topbar{position:sticky; top:0; z-index:40; background:color-mix(in srgb,var(--bg) 78%,transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex; align-items:center; justify-content:space-between; padding-block:15px}
+.brand{display:flex; align-items:center; gap:.6em; font-family:"Space Grotesk"; font-weight:600; font-size:1.1rem}
+.brand .mono{display:grid; place-items:center; width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#08122a; font-weight:700}
+.nav{display:flex; align-items:center; gap:clamp(12px,2.4vw,28px)}
+.nav-links{display:none} @media(min-width:860px){.nav-links{display:flex; gap:26px}} .nav-links a{color:var(--muted); font-size:.95rem} .nav-links a:hover{color:var(--ink)}
+.nav .btn{padding:.62em 1.1em}
+/* HERO com malha de gradiente animada */
+.hero{position:relative; overflow:hidden; isolation:isolate; border-bottom:1px solid var(--line)}
+.mesh{position:absolute; inset:-30%; z-index:0; filter:blur(80px); opacity:.7}
+.mesh b{position:absolute; width:44vw; height:44vw; border-radius:50%; display:block; mix-blend-mode:screen}
+.mesh .m1{background:radial-gradient(circle,rgba(108,140,255,.7),transparent 60%); left:-6vw; top:-10vw; animation:f1 20s ease-in-out infinite}
+.mesh .m2{background:radial-gradient(circle,rgba(61,214,168,.6),transparent 60%); right:-8vw; top:2vw; animation:f2 24s ease-in-out infinite}
+.mesh .m3{background:radial-gradient(circle,rgba(138,160,255,.5),transparent 60%); left:24vw; bottom:-16vw; animation:f3 28s ease-in-out infinite}
+@keyframes f1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(6%,5%) scale(1.12)}}
+@keyframes f2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-6%,7%) scale(1.15)}}
+@keyframes f3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(4%,-6%) scale(1.1)}}
+.hero .grid{position:absolute; inset:0; z-index:0; opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px; mask-image:radial-gradient(circle at 50% 30%,#000,transparent 78%)}
+.hero .wrap{position:relative; z-index:2; padding-block:clamp(72px,13vw,150px); text-align:center}
+.badge{display:inline-flex; align-items:center; gap:.5em; font-size:.82rem; font-weight:600; color:var(--accent-2);
+  border:1px solid var(--line); background:var(--surface); padding:.5em 1em; border-radius:999px}
+.hero h1{font-size:clamp(2.6rem,1.2rem + 6vw,5.4rem); margin:.4em auto .3em; max-width:16ch}
+.hero h1 .hl{background:linear-gradient(120deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.hero .lede{font-size:clamp(1.05rem,.95rem + .5vw,1.32rem); color:var(--muted); max-width:56ch; margin:0 auto}
+.hero-cta{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:2.2em}
+/* KPIs */
+.kpis{display:grid; gap:14px; grid-template-columns:1fr; margin-top:3em}
+@media(min-width:720px){.kpis{grid-template-columns:repeat(3,1fr)}}
+.kpi{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:22px; text-align:left}
+.kpi .n{font-family:"Space Grotesk"; font-size:2.1rem; font-weight:700; color:#fff; line-height:1}
+.kpi .n em{font-style:normal; background:linear-gradient(120deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.kpi p{color:var(--muted); font-size:.95rem; margin-top:.5em}
+/* headings */
+.head{max-width:44ch; margin-bottom:2.6em} .head h2{font-size:clamp(2rem,1.3rem + 2.6vw,3.3rem); margin:.3em 0 .4em}
+.center{margin-inline:auto; text-align:center}
+/* fear cards */
+.cards{display:grid; gap:18px; grid-template-columns:1fr} @media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:linear-gradient(180deg,var(--surface),var(--bg-2)); border:1px solid var(--line); border-radius:18px; padding:26px; position:relative}
+.card .q{font-family:"Space Grotesk"; font-size:2rem; color:var(--accent); line-height:.7}
+.card p{margin-top:.6em}
+/* comparacao */
+.vs{display:grid; gap:18px; grid-template-columns:1fr} @media(min-width:820px){.vs{grid-template-columns:1fr 1fr}}
+.vs .col{border:1px solid var(--line); border-radius:20px; padding:28px; background:var(--surface)}
+.vs .col.win{border-color:color-mix(in srgb,var(--accent) 55%,var(--line)); background:linear-gradient(180deg,var(--surface-2),var(--surface)); box-shadow:0 30px 80px -50px rgba(108,140,255,.8)}
+.vs .col h3{font-size:1.4rem; display:flex; align-items:center; justify-content:space-between; gap:.5em}
+.vs .tag{font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:.35em .7em; border-radius:999px}
+.vs .win .tag{background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#08122a}
+.vs .col ul{list-style:none; padding:0; margin:1.2em 0 0; display:grid; gap:.8em}
+.vs .col li{display:flex; gap:.7em; align-items:flex-start; color:var(--muted)}
+.vs .col li .i{flex:none; width:22px; height:22px; border-radius:50%; display:grid; place-items:center; font-size:.8rem; font-weight:700; margin-top:.1em}
+.vs .neg .i{background:rgba(255,122,122,.15); color:var(--danger)}
+.vs .pos .i{background:rgba(61,214,168,.16); color:var(--accent-2)}
+/* steps horizontais numerados grandes */
+.flow{display:grid; gap:18px; grid-template-columns:1fr} @media(min-width:860px){.flow{grid-template-columns:repeat(4,1fr)}}
+.fstep{border:1px solid var(--line); border-radius:18px; padding:24px; background:var(--surface); position:relative; overflow:hidden}
+.fstep .n{font-family:"Space Grotesk"; font-weight:700; font-size:3.2rem; line-height:1; color:transparent; -webkit-text-stroke:1.5px var(--accent); opacity:.65}
+.fstep h3{font-size:1.2rem; margin:.3em 0 .3em} .fstep p{color:var(--muted); font-size:.96rem}
+/* promise band */
+.promise{position:relative; overflow:hidden; border-block:1px solid var(--line); background:linear-gradient(120deg,rgba(108,140,255,.14),rgba(61,214,168,.12))}
+.promise .wrap{text-align:center; padding-block:clamp(60px,9vw,110px)}
+.promise h2{font-size:clamp(2rem,1.3rem + 3.2vw,3.6rem); max-width:20ch; margin:.2em auto}
+/* faq */
+.faq{display:grid; gap:12px; max-width:800px; margin-inline:auto}
+details{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:2px 22px} details[open]{border-color:var(--accent)}
+summary{cursor:pointer; padding:20px 0; font-family:"Space Grotesk"; font-weight:600; font-size:1.1rem; list-style:none; display:flex; justify-content:space-between; gap:1em; align-items:center}
+summary::-webkit-details-marker{display:none} summary .p{color:var(--accent); font-size:1.4rem; transition:transform .2s} details[open] summary .p{transform:rotate(45deg)}
+details p{color:var(--muted); padding:0 0 22px}
+/* CTA form */
+.cta{border:1px solid var(--line); border-radius:26px; padding:clamp(26px,4vw,52px); background:radial-gradient(120% 140% at 0% 0%,var(--surface-2),var(--bg-2)); display:grid; gap:30px; grid-template-columns:1fr}
+@media(min-width:880px){.cta{grid-template-columns:1.05fr .95fr; align-items:center}}
+.field{display:grid; gap:.4em; margin-bottom:15px} .field label{font-size:.85rem; font-weight:600}
+.field input,.field select{font-family:inherit; font-size:1rem; padding:.85em .95em; border-radius:12px; border:1px solid var(--line); background:var(--bg); color:var(--ink)}
+.field input:focus,.field select:focus{outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent)}
+.consent{display:flex; gap:.6em; align-items:flex-start; font-size:.85rem; color:var(--muted)} .consent input{margin-top:.2em}
+.demo-pill{display:inline-flex; gap:.5em; align-items:center; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-2); border:1px solid var(--line); border-radius:999px; padding:.4em .8em; margin-bottom:1em}
+.form-note{margin-top:12px; font-size:.84rem; color:var(--muted)}
+.form-ok{display:none; margin-top:14px; padding:20px; border-radius:14px; background:var(--surface); border:1px solid var(--accent-2)} .form-ok.show{display:block}
+.footer{border-top:1px solid var(--line); background:var(--bg-2)}
+.footer .wrap{padding-block:52px 38px; display:grid; gap:26px; grid-template-columns:1fr} @media(min-width:720px){.footer .wrap{grid-template-columns:1.6fr 1fr 1fr}}
+.footer a{color:var(--muted); display:block; padding:.25em 0} .footer a:hover{color:var(--accent-2)}
+.footer h4{font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-2); margin:0 0 .7em}
+.copyline{border-top:1px solid var(--line)} .copyline .wrap{display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; padding-block:20px; font-size:.82rem; color:var(--muted)}
+.copytext{cursor:pointer; text-decoration:underline dotted; text-underline-offset:3px}
+body.js-reveal .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s, transform .7s} body.js-reveal .reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){.mesh b{animation:none!important} *{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="#topo"><span class="mono">PC</span> Patrícia Consórcios</a>
+  <nav class="nav">
+    <div class="nav-links"><a href="#medo">Por que consórcio</a><a href="#vs">Comparação</a><a href="#como">Como funciona</a><a href="#duvidas">Dúvidas</a></div>
+    <a class="btn btn-primary" href="#simular">Simular</a>
+  </nav>
+</div></header>
+
+<main id="topo">
+  <section class="hero">
+    <div class="mesh" aria-hidden="true"><b class="m1"></b><b class="m2"></b><b class="m3"></b></div>
+    <div class="grid" aria-hidden="true"></div>
+    <div class="wrap">
+      <span class="badge">● Consórcio de carro e imóvel</span>
+      <h1>Seu bem sem o peso dos <span class="hl">juros.</span></h1>
+      <p class="lede">Consórcio é um jeito planejado de conquistar seu carro ou imóvel sem os juros de um financiamento. Eu te mostro, com transparência, se faz sentido pra você.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#simular">Simular meu consórcio</a>
+        <a class="btn btn-ghost" href="#como">Entender como funciona</a>
+      </div>
+      <div class="kpis">
+        <div class="kpi reveal"><div class="n"><em>0%</em> de juros</div><p>Você paga taxa de administração, não os juros de um financiamento.</p></div>
+        <div class="kpi reveal"><div class="n">Carta <em>de crédito</em></div><p>Na contemplação, você compra o bem à vista e negocia melhor.</p></div>
+        <div class="kpi reveal"><div class="n">Parcela <em>planejada</em></div><p>Um valor que cabe no seu orçamento, sem susto no fim do mês.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="medo"><div class="wrap">
+    <div class="head reveal"><span class="eyebrow">Talvez você já tenha sentido isso</span>
+      <h2>O sonho existe. O medo dos juros também.</h2>
+      <p class="muted">Financiamento assusta, e com razão. Dá pra realizar de outro jeito.</p></div>
+    <div class="cards">
+      <div class="card reveal"><div class="q">“</div><p>No financiamento, os juros quase dobram o valor do bem.</p></div>
+      <div class="card reveal"><div class="q">“</div><p>Tenho medo de entrar numa dívida que não acaba mais.</p></div>
+      <div class="card reveal"><div class="q">“</div><p>Quero realizar, mas sem cair em pegadinha ou letra miúda.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section" id="vs" style="padding-top:0"><div class="wrap">
+    <div class="head center reveal"><span class="eyebrow" style="justify-content:center">Lado a lado</span>
+      <h2>Financiamento x Consórcio</h2>
+      <p class="muted">Sem enrolação. Cada um serve pra um momento, e eu te ajudo a enxergar o seu.</p></div>
+    <div class="vs">
+      <div class="col reveal"><h3>Financiamento <span class="tag" style="background:rgba(255,122,122,.15);color:var(--danger)">na pressa</span></h3>
+        <ul>
+          <li class="neg"><span class="i">✕</span> Juros altos que encarecem muito o valor final.</li>
+          <li class="neg"><span class="i">✕</span> Custo total costuma passar bem do preço do bem.</li>
+          <li class="pos"><span class="i">✓</span> Você tem o bem na hora.</li>
+        </ul></div>
+      <div class="col win reveal"><h3>Consórcio <span class="tag">planejado</span></h3>
+        <ul>
+          <li class="pos"><span class="i">✓</span> Sem os juros do financiamento (você paga taxa de administração).</li>
+          <li class="pos"><span class="i">✓</span> Carta de crédito pra comprar à vista e negociar melhor.</li>
+          <li class="pos"><span class="i">✓</span> Parcela planejada, do tamanho do seu orçamento.</li>
+        </ul></div>
+    </div>
+  </div></section>
+
+  <section class="section" id="como" style="padding-top:0"><div class="wrap">
+    <div class="head center reveal"><span class="eyebrow" style="justify-content:center">Como funciona</span><h2>Do plano à chave na mão</h2></div>
+    <div class="flow reveal">
+      <div class="fstep"><div class="n">01</div><h3>Simulação</h3><p>A gente conversa, vê seu objetivo e simula a carta e a parcela que cabem.</p></div>
+      <div class="fstep"><div class="n">02</div><h3>Entrada no grupo</h3><p>Você entra num grupo com o valor de crédito que escolheu.</p></div>
+      <div class="fstep"><div class="n">03</div><h3>Contemplação</h3><p>Por sorteio ou por lance, você é contemplado e recebe a carta.</p></div>
+      <div class="fstep"><div class="n">04</div><h3>Você compra</h3><p>Com a carta, compra o bem à vista, como se fosse dinheiro na mão.</p></div>
+    </div>
+  </div></section>
+
+  <section class="promise"><div class="wrap reveal">
+    <span class="eyebrow" style="justify-content:center">A virada de chave</span>
+    <h2>Planejar hoje é realizar sem susto <span class="hl" style="background:linear-gradient(120deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">amanhã.</span></h2>
+    <p class="muted" style="max-width:52ch;margin:1em auto 0">Consórcio não é pra quem tem pressa. É pra quem quer chegar lá inteiro, sem o peso dos juros.</p>
+  </div></section>
+
+  <section class="section" id="duvidas"><div class="wrap">
+    <div class="head center reveal"><span class="eyebrow" style="justify-content:center">Dúvidas honestas</span><h2>O que as pessoas mais me perguntam.</h2></div>
+    <div class="faq reveal">
+      <details><summary>Consórcio tem juros mesmo? <span class="p">+</span></summary><p>Não tem os juros de um financiamento. O que existe é a taxa de administração, que é o custo do serviço e costuma ser bem menor que os juros. Eu te mostro os números com transparência.</p></details>
+      <details><summary>Quando eu sou contemplado? <span class="p">+</span></summary><p>A contemplação acontece por sorteio ou por lance (uma oferta pra antecipar). Não dá pra prometer data, e eu nunca vou te prometer isso. O que eu faço é te explicar as chances de forma honesta.</p></details>
+      <details><summary>E se eu precisar desistir? <span class="p">+</span></summary><p>Existe regra pra isso, com prazos e condições. Eu explico tudo antes de você decidir, pra não ter surpresa depois.</p></details>
+      <details><summary>É seguro? <span class="p">+</span></summary><p>Consórcio é regulado e fiscalizado pelo Banco Central. Ainda assim, o mais importante é entender o que você está contratando, e é isso que eu faço com você.</p></details>
+      <details><summary>Serve pra qualquer valor? <span class="p">+</span></summary><p>Tem cartas de vários tamanhos, pra carro, imóvel e outros bens. A gente vê na simulação o que faz sentido pro seu momento.</p></details>
+    </div>
+  </div></section>
+
+  <section class="section" id="simular" style="padding-top:0"><div class="wrap"><div class="cta">
+    <div class="reveal">
+      <span class="eyebrow">O próximo passo</span>
+      <h2 style="font-size:clamp(1.9rem,1.3rem + 2.6vw,3rem);margin:.3em 0 .4em">Vamos simular o seu, <span class="hl" style="background:linear-gradient(120deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">sem compromisso?</span></h2>
+      <p class="muted" style="max-width:44ch">Me conta o que você quer conquistar. Eu simulo a carta e a parcela e te explico tudo, com clareza.</p>
+    </div>
+    <div class="reveal">
+      <span class="demo-pill">● Modo demonstração</span>
+      <form id="leadForm" novalidate>
+        <div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como quer ser chamado(a)" required></div>
+        <div class="field"><label for="zap">WhatsApp</label><input id="zap" name="zap" type="tel" autocomplete="tel" placeholder="(51) 9 0000-0000" required></div>
+        <div class="field"><label for="motivo">O que você quer conquistar?</label>
+          <select id="motivo" name="motivo"><option value="carro">Um carro</option><option value="imovel">Um imóvel</option><option value="outro">Outro bem</option><option value="entender">Ainda quero entender</option></select></div>
+        <label class="consent"><input id="consent" type="checkbox" required> Concordo em ser contatado(a) sobre a minha simulação.</label>
+        <div style="margin-top:16px"><button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Simular meu consórcio</button></div>
+        <p class="form-note">Prévia de demonstração: nenhum dado é enviado ou armazenado.</p>
+        <div class="form-ok" id="formOk"><b style="font-family:'Space Grotesk'">Recebi por aqui. ✦</b><p class="muted" style="margin-top:.4em">Nesta prévia é só demonstração. Em produção, a sua mensagem chega direto pra Patrícia.</p></div>
+      </form>
+    </div>
+  </div></div></section>
+</main>
+
+<footer class="footer"><div class="wrap">
+  <div>
+    <a class="brand" href="#topo"><span class="mono">PC</span> Patrícia Consórcios</a>
+    <p class="muted" style="margin-top:1em;max-width:36ch">Consórcio de carro e imóvel, sem os juros do financiamento. Planejamento com transparência.</p>
+  </div>
+  <div><h4>Conteúdo</h4><a href="https://www.instagram.com/patricia.consorcios/" target="_blank" rel="noopener">Instagram @patricia.consorcios</a><a href="#como">Como funciona</a></div>
+  <div><h4>Simular</h4><span class="copytext" data-copy="Fale com a Patrícia sobre consórcio pelo Instagram @patricia.consorcios">Copiar contato</span><a href="#simular">Fazer simulação</a></div>
+</div>
+<div class="copyline"><div class="wrap"><span>Prévia criada pela ANi | Alquimia Digital · demonstração, não indexada.</span><span>Formulário em modo demonstração. Consórcio é regulado pelo Banco Central.</span></div></div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(!reduce && "IntersectionObserver" in window){
+    document.body.classList.add("js-reveal");
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.14,rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});
+  }
+  var form=document.getElementById("leadForm"),ok=document.getElementById("formOk");
+  if(form){form.addEventListener("submit",function(e){e.preventDefault();if(!form.checkValidity()){form.reportValidity();return;}Array.prototype.forEach.call(form.querySelectorAll("input,select,button,label.consent"),function(el){el.style.display="none";});if(ok){ok.classList.add("show");ok.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});}});}
+  document.querySelectorAll(".copytext").forEach(function(el){el.addEventListener("click",function(){var t=el.getAttribute("data-copy")||el.textContent;var d=function(){var o=el.textContent;el.textContent="Copiado ✓";setTimeout(function(){el.textContent=o;},1600);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(d).catch(d);}else{d();}});});
+})();
+</script>
+</body></html>

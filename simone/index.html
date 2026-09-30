@@ -1,0 +1,599 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Simone Freitas</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Microcrédito e finanças em Porto Alegre com Simone Freitas. Conversa real sobre dinheiro antes de decidir.">
+<meta property="og:title" content="Simone Freitas — Dinheiro bem entendido vira decisão">
+<meta property="og:description" content="Microcrédito, Juro Zero em Porto Alegre e conversas reais sobre dinheiro.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;600;700&display=swap">
+
+<style>
+/* Layout: narrativa editorial em coluna única, com bandas escuras cinematográficas,
+   luz ambiente em movimento e uma galeria de vídeos flutuantes. */
+:root{
+  --bg:#FAF7F1;          /* papel quente */
+  --surface:#FFFFFF;
+  --ink:#1A1E24;         /* quase-preto frio */
+  --muted:#5D636D;       /* cinza com viés frio */
+  --line:rgba(26,30,36,.12);
+  --gold:#A9781F;        /* ouro alquímico (contraste AA no papel) */
+  --gold-soft:#D8B877;
+  --deep:#0E2E28;        /* pinho profundo p/ bandas cinematográficas */
+  --deep-2:#08201C;
+  --deep-fg:#F2ECDD;     /* marfim sobre as bandas escuras */
+  --deep-muted:#B7C4BC;
+  --deep-line:rgba(242,236,221,.16);
+  --radius:18px;
+  --maxw:1080px;
+  --step:clamp(1rem,.6rem + 1.4vw,1.25rem);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C1310; --surface:#121B16; --ink:#ECE7DA; --muted:#A3A99E;
+    --line:rgba(236,231,218,.14); --gold:#D6A94E; --gold-soft:#E7CB8C;
+    --deep:#0A231E; --deep-2:#061511; --deep-fg:#F2ECDD; --deep-muted:#AFBEB4;
+    --deep-line:rgba(242,236,221,.16);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C1310; --surface:#121B16; --ink:#ECE7DA; --muted:#A3A99E;
+  --line:rgba(236,231,218,.14); --gold:#D6A94E; --gold-soft:#E7CB8C;
+  --deep:#0A231E; --deep-2:#061511; --deep-fg:#F2ECDD; --deep-muted:#AFBEB4;
+  --deep-line:rgba(242,236,221,.16);
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:var(--step); line-height:1.6; margin:0;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+h1,h2,h3,.display{font-family:"Fraunces","Georgia",serif; font-weight:500; line-height:1.05; text-wrap:balance; letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(16px,5vw,40px)}
+.eyebrow{font-size:.74rem; letter-spacing:.18em; text-transform:uppercase; font-weight:600; color:var(--gold)}
+.muted{color:var(--muted)}
+.section{padding-block:clamp(56px,9vw,116px)}
+
+/* botões */
+.btn{display:inline-flex; align-items:center; gap:.5em; font-family:"Figtree"; font-weight:600;
+  font-size:1rem; padding:.85em 1.4em; border-radius:999px; border:1px solid transparent;
+  cursor:pointer; text-decoration:none; transition:transform .25s ease, background .25s ease, box-shadow .25s ease}
+.btn:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+.btn-primary{background:var(--gold); color:#1a1205; box-shadow:0 10px 30px -12px rgba(169,120,31,.75)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent; border-color:var(--line); color:inherit}
+.btn-ghost:hover{border-color:var(--gold); color:var(--gold)}
+.on-deep .btn-ghost{border-color:var(--deep-line); color:var(--deep-fg)}
+.on-deep .btn-ghost:hover{border-color:var(--gold-soft); color:var(--gold-soft)}
+
+/* header */
+.topbar{position:sticky; top:env(safe-area-inset-top,0px); z-index:40;
+  backdrop-filter:blur(10px); background:color-mix(in srgb,var(--bg) 80%,transparent);
+  border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex; align-items:center; justify-content:space-between; padding-block:14px}
+.brand{display:flex; align-items:center; gap:.6em; font-family:"Fraunces"; font-weight:600; font-size:1.15rem; letter-spacing:-.01em; text-decoration:none}
+.brand .mono{display:grid; place-items:center; width:34px; height:34px; border-radius:50%;
+  background:var(--deep); color:var(--gold-soft); font-size:.85rem; letter-spacing:.02em}
+.nav{display:flex; align-items:center; gap:clamp(14px,2.5vw,30px)}
+.nav a{text-decoration:none; font-size:.95rem; color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+.nav .btn{padding:.6em 1.1em}
+.nav-links{display:none}
+@media(min-width:820px){.nav-links{display:flex; gap:26px}}
+.theme-toggle{background:transparent; border:1px solid var(--line); color:var(--muted);
+  width:38px; height:38px; border-radius:50%; cursor:pointer; font-size:1rem; display:grid; place-items:center}
+.theme-toggle:hover{color:var(--gold); border-color:var(--gold)}
+
+/* HERO */
+.hero{position:relative; overflow:hidden; background:var(--deep); color:var(--deep-fg); isolation:isolate}
+.hero-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0}
+.hero-veil{position:absolute; inset:0; z-index:1; background:
+  linear-gradient(90deg,rgba(6,21,17,.94) 0%,rgba(6,21,17,.80) 46%,rgba(6,21,17,.50) 100%),
+  linear-gradient(180deg,rgba(6,21,17,.30),rgba(6,21,17,.72))}
+@media(max-width:640px){.hero-veil{background:linear-gradient(180deg,rgba(6,21,17,.72),rgba(6,21,17,.90))}}
+.hero .wrap{position:relative; z-index:2; padding-block:clamp(70px,13vw,150px)}
+.aurora{position:absolute; inset:-20% -10% -10% -10%; z-index:1; filter:blur(60px); opacity:.45; mix-blend-mode:screen}
+.aurora span{position:absolute; border-radius:50%; mix-blend-mode:screen}
+.aurora .a1{width:52vw; height:52vw; left:-6vw; top:-8vw; background:radial-gradient(circle at 30% 30%,rgba(214,169,78,.55),transparent 62%); animation:drift1 18s ease-in-out infinite}
+.aurora .a2{width:46vw; height:46vw; right:-4vw; top:8vw; background:radial-gradient(circle at 60% 40%,rgba(70,150,120,.5),transparent 64%); animation:drift2 22s ease-in-out infinite}
+.aurora .a3{width:40vw; height:40vw; left:24vw; bottom:-14vw; background:radial-gradient(circle at 50% 50%,rgba(120,90,30,.45),transparent 66%); animation:drift3 26s ease-in-out infinite}
+@keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(6%,4%) scale(1.08)}}
+@keyframes drift2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-5%,6%) scale(1.12)}}
+@keyframes drift3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(3%,-6%) scale(1.05)}}
+.hero-grid{display:grid; gap:clamp(30px,5vw,56px); grid-template-columns:1fr}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr; align-items:center}}
+.hero h1{font-size:clamp(2.6rem,1.4rem + 5.6vw,5rem); margin:.35em 0 .5em}
+.hero h1 em{font-style:italic; color:var(--gold-soft)}
+.hero .lede{font-size:clamp(1.05rem,.95rem + .5vw,1.3rem); color:var(--deep-muted); max-width:32ch}
+.hero-cta{display:flex; flex-wrap:wrap; gap:14px; margin-top:2em}
+.hero-trust{margin-top:2.4em; font-size:.9rem; color:var(--deep-muted); display:flex; align-items:center; gap:.7em; flex-wrap:wrap}
+.dot{width:6px; height:6px; border-radius:50%; background:var(--gold-soft); display:inline-block}
+
+/* retrato flutuante */
+.portrait{position:relative; justify-self:center}
+.portrait-frame{position:relative; width:min(360px,74vw); aspect-ratio:4/5; border-radius:200px 200px 22px 22px;
+  background:linear-gradient(160deg,rgba(242,236,221,.14),rgba(242,236,221,.04));
+  border:1px solid var(--deep-line); overflow:hidden;
+  box-shadow:0 40px 90px -40px rgba(0,0,0,.6)}
+.portrait-img{width:100%; height:100%; object-fit:cover; object-position:50% 20%; display:block}
+.portrait .badge{position:absolute; background:var(--surface); color:var(--ink); border-radius:14px;
+  padding:.7em .9em; box-shadow:0 20px 50px -24px rgba(0,0,0,.5); font-size:.82rem; line-height:1.3; will-change:transform; z-index:3}
+.portrait .badge b{font-family:"Fraunces"; font-weight:600}
+.portrait .badge.b1{left:-6%; top:12%}
+.portrait .badge.b2{right:-7%; bottom:12%; max-width:180px}
+.portrait .badge .k{color:var(--gold); font-weight:700}
+/* reel real tocando, flutuando sobre o retrato */
+.reel-chip{position:absolute; right:-10%; bottom:4%; width:min(184px,46vw); aspect-ratio:9/16;
+  border-radius:22px; overflow:hidden; border:3px solid var(--surface); z-index:4;
+  box-shadow:0 30px 70px -24px rgba(0,0,0,.75); will-change:transform; background:#e9e4da}
+.reel-chip video{width:100%; height:100%; object-fit:cover; display:block}
+
+/* blocos genéricos */
+.lead-2{max-width:60ch}
+.grid-3{display:grid; gap:20px; grid-template-columns:1fr}
+@media(min-width:720px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.grid-2{display:grid; gap:22px; grid-template-columns:1fr}
+@media(min-width:800px){.grid-2{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:26px}
+.card h3{font-size:1.35rem; margin:.2em 0 .4em}
+.card .num{font-family:"Fraunces"; font-size:.95rem; color:var(--gold); font-weight:600}
+.head-block{max-width:34ch; margin-bottom:2.4em}
+.head-block h2{font-size:clamp(1.9rem,1.3rem + 2.4vw,3.1rem); margin:.25em 0 .5em}
+
+/* tensão */
+.scenario{display:flex; gap:.8em; align-items:flex-start; padding:22px; border-radius:var(--radius); background:var(--surface); border:1px solid var(--line)}
+.scenario .q{font-family:"Fraunces"; font-size:1.7rem; color:var(--gold-soft); line-height:1}
+
+/* banda cinematográfica (filosofia / fechamento) */
+.band{position:relative; overflow:hidden; background:var(--deep); color:var(--deep-fg)}
+.band::before{content:""; position:absolute; inset:0; opacity:.5;
+  background:radial-gradient(60% 90% at 15% 20%,rgba(214,169,78,.28),transparent 60%),
+             radial-gradient(50% 80% at 90% 80%,rgba(70,150,120,.22),transparent 60%)}
+.band .wrap{position:relative; z-index:2}
+.band h2{font-size:clamp(2.1rem,1.4rem + 3.4vw,3.8rem); max-width:16ch}
+.band h2 em{font-style:italic; color:var(--gold-soft)}
+.band p{color:var(--deep-muted); max-width:52ch; margin-top:1.2em; font-size:1.1rem}
+
+/* processo (a conversa da clareza) */
+.steps{display:grid; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+@media(min-width:860px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{background:var(--surface); padding:28px 24px; position:relative}
+.step .n{font-family:"Fraunces"; font-size:2.4rem; color:var(--gold); line-height:1; font-variant-numeric:tabular-nums}
+.step h3{font-size:1.2rem; margin:.5em 0 .35em}
+.step p{color:var(--muted); font-size:.98rem}
+
+/* antes de pegar crédito */
+.checks{display:grid; gap:16px}
+.check{display:flex; gap:1em; align-items:flex-start; padding:20px 22px; border-left:3px solid var(--gold); background:var(--surface); border-radius:0 var(--radius) var(--radius) 0}
+.check .ico{color:var(--gold); font-family:"Fraunces"; font-weight:600}
+
+/* VÍDEOS FLUTUANTES */
+.videos{background:var(--deep-2); color:var(--deep-fg); position:relative; overflow:hidden}
+.videos .orb{position:absolute; border-radius:50%; filter:blur(70px); opacity:.5}
+.videos .orb.o1{width:34vw;height:34vw;left:-8vw;top:6vw;background:radial-gradient(circle,rgba(214,169,78,.4),transparent 65%)}
+.videos .orb.o2{width:30vw;height:30vw;right:-6vw;bottom:2vw;background:radial-gradient(circle,rgba(70,150,120,.4),transparent 65%)}
+.vgallery{display:grid; gap:20px; grid-template-columns:1fr; position:relative; z-index:2}
+@media(min-width:700px){.vgallery{grid-template-columns:repeat(3,1fr)}}
+.vtile{display:block; text-decoration:none; color:var(--deep-fg); will-change:transform}
+.vtile-media{position:relative; aspect-ratio:9/13; border-radius:20px; overflow:hidden; border:1px solid var(--deep-line);
+  background:linear-gradient(150deg,#123a32,#0a221d); box-shadow:0 30px 70px -34px rgba(0,0,0,.7)}
+.vtile-media .anim{position:absolute; inset:0; background:
+  radial-gradient(70% 50% at 30% 20%,rgba(214,169,78,.5),transparent 60%),
+  radial-gradient(60% 60% at 80% 80%,rgba(70,150,120,.5),transparent 60%);
+  background-size:180% 180%; animation:posterShift 14s ease-in-out infinite}
+@keyframes posterShift{0%,100%{background-position:0% 0%}50%{background-position:100% 100%}}
+.vtile-media video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.vtile-media .cover{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:scale(1.02); animation:kenburns 16s ease-in-out infinite alternate}
+@keyframes kenburns{0%{transform:scale(1.02) translate(0,0)}100%{transform:scale(1.14) translate(-2%,-3%)}}
+.vtile-media::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 40%,rgba(6,21,17,.65))}
+.vtile-media .play,.vtile-media .tag{z-index:2}
+.vtile-media .play{position:absolute; left:18px; bottom:18px; width:52px; height:52px; border-radius:50%;
+  background:rgba(250,247,241,.92); color:var(--deep); display:grid; place-items:center; font-size:1.1rem;
+  transition:transform .25s ease; box-shadow:0 10px 26px -10px rgba(0,0,0,.6)}
+.vtile:hover .play{transform:scale(1.08)}
+.vtile-media .tag{position:absolute; right:14px; top:14px; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase;
+  background:rgba(8,32,28,.7); border:1px solid var(--deep-line); padding:.35em .7em; border-radius:999px}
+.vtile-cap{padding:16px 4px 0}
+.vtile-cap b{font-family:"Fraunces"; font-weight:600; font-size:1.1rem; display:block}
+.vtile-cap span{color:var(--deep-muted); font-size:.92rem}
+
+/* banda cinematográfica com vídeo de fundo */
+.lifeband{position:relative; overflow:hidden; min-height:min(78vh,620px); display:grid; align-items:center; isolation:isolate}
+.lifeband-bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0}
+.lifeband-veil{position:absolute; inset:0; z-index:1;
+  background:linear-gradient(90deg,rgba(8,32,28,.92) 0%,rgba(8,32,28,.78) 42%,rgba(8,32,28,.30) 100%)}
+@media(max-width:640px){.lifeband-veil{background:linear-gradient(180deg,rgba(8,32,28,.62),rgba(8,32,28,.92))}}
+.lifeband .wrap{position:relative; z-index:2; padding-block:clamp(60px,10vw,110px)}
+.lifeband-inner{max-width:34ch; color:var(--deep-fg)}
+.lifeband-inner h2{font-size:clamp(2.1rem,1.4rem + 3.2vw,3.6rem); margin:.25em 0 .5em}
+.lifeband-inner h2 em{font-style:italic; color:var(--gold-soft)}
+.lifeband-inner p{color:var(--deep-muted); font-size:1.08rem; margin-bottom:1.6em}
+
+/* sobre */
+.about{display:grid; gap:clamp(28px,5vw,60px); grid-template-columns:1fr}
+@media(min-width:860px){.about{grid-template-columns:.9fr 1.1fr; align-items:center}}
+.about-card{background:var(--deep); color:var(--deep-fg); border-radius:24px; padding:34px; position:relative; overflow:hidden}
+.about-card .mono{font-family:"Fraunces"; font-size:2.6rem; color:var(--gold-soft)}
+.about-card ul{list-style:none; padding:0; margin:1.4em 0 0; display:grid; gap:.7em}
+.about-card li{display:flex; gap:.6em; color:var(--deep-muted)}
+.about-card li::before{content:"·"; color:var(--gold-soft); font-weight:700}
+
+/* faq */
+.faq{display:grid; gap:12px; max-width:760px}
+details{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:2px 20px}
+details[open]{border-color:var(--gold)}
+summary{cursor:pointer; padding:18px 0; font-family:"Fraunces"; font-size:1.12rem; list-style:none; display:flex; justify-content:space-between; gap:1em; align-items:center}
+summary::-webkit-details-marker{display:none}
+summary .plus{color:var(--gold); font-size:1.3rem; transition:transform .2s ease}
+details[open] summary .plus{transform:rotate(45deg)}
+details p{color:var(--muted); padding:0 0 20px}
+
+/* formulário */
+.form-wrap{background:var(--surface); border:1px solid var(--line); border-radius:24px; padding:clamp(24px,4vw,40px)}
+.field{display:grid; gap:.4em; margin-bottom:16px}
+.field label{font-size:.85rem; font-weight:600; letter-spacing:.02em}
+.field input,.field select,.field textarea{font-family:inherit; font-size:1rem; padding:.8em .9em; border-radius:12px;
+  border:1px solid var(--line); background:var(--bg); color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--gold); outline-offset:1px; border-color:var(--gold)}
+.consent{display:flex; gap:.6em; align-items:flex-start; font-size:.85rem; color:var(--muted)}
+.consent input{margin-top:.2em}
+.form-note{margin-top:14px; font-size:.85rem; color:var(--muted)}
+.form-ok{display:none; background:var(--deep); color:var(--deep-fg); border-radius:16px; padding:22px; margin-top:16px}
+.form-ok.show{display:block}
+.demo-pill{display:inline-flex; align-items:center; gap:.5em; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--gold); border:1px solid var(--line); border-radius:999px; padding:.4em .8em; margin-bottom:1.2em}
+
+/* footer */
+.footer{background:var(--deep-2); color:var(--deep-fg); padding-block:56px 40px}
+.footer .cols{display:grid; gap:30px; grid-template-columns:1fr}
+@media(min-width:720px){.footer .cols{grid-template-columns:1.4fr 1fr 1fr}}
+.footer a{color:var(--deep-muted); text-decoration:none; display:block; padding:.25em 0}
+.footer a:hover{color:var(--gold-soft)}
+.footer h4{font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-soft); margin:0 0 .8em}
+.footer .copy{margin-top:34px; padding-top:22px; border-top:1px solid var(--deep-line); font-size:.82rem; color:var(--deep-muted); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap}
+.copytext{cursor:pointer; text-decoration:underline dotted; text-underline-offset:3px}
+
+/* reveal (visível por padrão; só anima quando JS habilita e sem reduced-motion) */
+body.js-reveal .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)}
+body.js-reveal .reveal.in{opacity:1; transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .aurora span,.vtile-media .anim,.band::before{animation:none!important}
+  *{scroll-behavior:auto!important}
+}
+</style>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#topo"><span class="mono">SF</span> Simone Freitas</a>
+    <nav class="nav" aria-label="Principal">
+      <div class="nav-links">
+        <a href="#caminhos">Caminhos</a>
+        <a href="#conversa">A conversa</a>
+        <a href="#leve">Sem tabu</a>
+        <a href="#duvidas">Dúvidas</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">◐</button>
+      <a class="btn btn-primary" href="#conversar">Conversar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- HERO -->
+  <section class="hero on-deep">
+    <video class="hero-video" src="media/entrep-land.mp4" poster="media/entrep-land-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Microcrédito e finanças · Porto Alegre</span>
+          <h1>Dinheiro bem entendido <em>vira decisão.</em></h1>
+          <p class="lede">Falar de dinheiro ainda trava muita gente. Aqui a gente conversa antes de decidir, no seu ritmo, sem julgamento e sem promessa fácil.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#conversar">Começar a conversa da clareza</a>
+            <a class="btn btn-ghost" href="#caminhos">Conhecer o Juro Zero</a>
+          </div>
+          <p class="hero-trust">
+            <span class="dot"></span> Opero o Juro Zero em Porto Alegre
+            <span class="dot"></span> Outras linhas de crédito
+            <span class="dot"></span> Conversa real, sem enrolação
+          </p>
+        </div>
+        <div class="portrait">
+          <div class="portrait-frame">
+            <img class="portrait-img" src="assets/si-portrait.webp" alt="Simone Freitas, especialista em microcrédito e finanças em Porto Alegre" width="1100" height="1374">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENSÃO / GUESTOLOGIA -->
+  <section class="section">
+    <div class="wrap">
+      <div class="head-block reveal">
+        <span class="eyebrow">Talvez você esteja aqui porque</span>
+        <h2>Você não precisa ter todas as respostas pra começar.</h2>
+        <p class="muted">Só precisa de alguém que escute o seu momento antes de falar de crédito.</p>
+      </div>
+      <div class="grid-3">
+        <div class="scenario reveal"><span class="q">“</span><p>Preciso de um investimento, mas não sei se vou dar conta de pagar.</p></div>
+        <div class="scenario reveal"><span class="q">“</span><p>Quero organizar as contas antes de crescer, e não sei por onde.</p></div>
+        <div class="scenario reveal"><span class="q">“</span><p>Ouço falar de linha de crédito, mas tenho medo de cair numa cilada.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILOSOFIA (banda) -->
+  <section class="band section on-deep">
+    <div class="wrap reveal">
+      <span class="eyebrow">A base de tudo</span>
+      <h2>Crédito é ferramenta. A <em>decisão</em> vem primeiro.</h2>
+      <p>Crédito bom é o crédito que faz sentido pro seu momento. Se não fizer, eu te falo. Meu trabalho não é te empurrar um valor, é te ajudar a enxergar com clareza o que aquele dinheiro faz na sua vida e no seu negócio.</p>
+    </div>
+  </section>
+
+  <!-- OS 3 CAMINHOS -->
+  <section class="section" id="caminhos">
+    <div class="wrap">
+      <div class="head-block reveal">
+        <span class="eyebrow">Os caminhos</span>
+        <h2>Três formas de conversar sobre o seu dinheiro.</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal">
+          <span class="num">Microcrédito</span>
+          <h3>Crédito pra quem produz</h3>
+          <p class="muted">Pensado pra quem empreende, produz ou está começando. A gente vê o que cabe no seu negócio, não o que cabe no folheto.</p>
+        </div>
+        <div class="card reveal">
+          <span class="num">Juro Zero</span>
+          <h3>Juro Zero em Porto Alegre</h3>
+          <p class="muted">Uma linha da cidade pra quem empreende. Eu te explico como funciona e ajudo a entender se é pra você, sem promessa mágica.</p>
+        </div>
+        <div class="card reveal">
+          <span class="num">Finanças</span>
+          <h3>Finanças e gestão</h3>
+          <p class="muted">Conversas reais sobre dinheiro: organizar, entender os números e enxergar com calma o próximo passo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A CONVERSA DA CLAREZA -->
+  <section class="section" id="conversa" style="padding-top:0">
+    <div class="wrap">
+      <div class="head-block reveal">
+        <span class="eyebrow">Como funciona</span>
+        <h2>A Conversa da Clareza</h2>
+        <p class="muted">Não é uma simulação fria de crédito. É uma conversa em quatro passos pra você decidir com a cabeça no lugar.</p>
+      </div>
+      <div class="steps reveal">
+        <div class="step"><div class="n">01</div><h3>Escuta</h3><p>Primeiro eu te escuto. Seu momento, seu medo e o que você quer resolver.</p></div>
+        <div class="step"><div class="n">02</div><h3>Contexto</h3><p>A gente coloca os números e a sua realidade na mesa, sem susto.</p></div>
+        <div class="step"><div class="n">03</div><h3>Possibilidades</h3><p>Eu te mostro os caminhos possíveis, com o lado bom e o lado difícil de cada um.</p></div>
+        <div class="step"><div class="n">04</div><h3>Próximo passo</h3><p>Você sai sabendo o que fazer, mesmo que a melhor resposta hoje seja esperar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTES DE PEGAR CRÉDITO (quebra de padrão) -->
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="grid-2">
+        <div class="head-block reveal" style="margin-bottom:0">
+          <span class="eyebrow">Antes de pegar crédito</span>
+          <h2>Três perguntas que eu faria com você.</h2>
+          <p class="muted">Se a resposta ainda não estiver clara, a gente conversa antes. Crédito não é pressa.</p>
+        </div>
+        <div class="checks">
+          <div class="check reveal"><span class="ico">?</span><p>Esse dinheiro resolve uma causa ou só tapa um buraco por um tempo?</p></div>
+          <div class="check reveal"><span class="ico">?</span><p>Se as coisas apertarem, eu consigo pagar sem me afogar?</p></div>
+          <div class="check reveal"><span class="ico">?</span><p>Eu entendo o custo total, não só o tamanho da parcela?</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDA CINEMATOGRÁFICA (vídeo público de lifestyle) -->
+  <section class="lifeband" id="leve">
+    <video class="lifeband-bg" src="media/entrep-band.mp4" poster="media/entrep-band-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+    <div class="lifeband-veil" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="lifeband-inner reveal">
+        <span class="eyebrow" style="color:var(--gold-soft)">Sem tabu</span>
+        <h2>Falar de dinheiro pode ser <em>leve.</em></h2>
+        <p>Quando você entende para onde o dinheiro vai, ele para de ser um peso e vira escolha. É esse o tom da nossa conversa: prática, honesta e no seu tempo.</p>
+        <a class="btn btn-primary" href="#conversar">Começar a conversa da clareza</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section">
+    <div class="wrap about">
+      <div class="about-card reveal">
+        <span class="mono">SF</span>
+        <p style="margin-top:.5em; color:var(--deep-fg)">Sou a Si. Falo sobre dinheiro de um jeito real.</p>
+        <ul>
+          <li>Microcrédito e finanças em Porto Alegre</li>
+          <li>Opero o Juro Zero e outras linhas de crédito</li>
+          <li>Apresento o SiMONEY, meu podcast</li>
+          <li>Participo de ações pra mulheres empreendedoras e projetos voluntários</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Quem conversa com você</span>
+        <h2 style="font-size:clamp(1.8rem,1.3rem + 2vw,2.8rem); margin:.3em 0 .5em">Menos discurso de guru. Mais conversa de gente.</h2>
+        <p class="muted lead-2">Eu não romantizo empreender e não vendo atalho. O que eu ofereço é clareza: entender o seu momento, olhar os números sem medo e escolher o caminho que faz sentido pra você. Quando o dinheiro deixa de ser tabu, a decisão fica mais leve.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="duvidas" style="padding-top:0">
+    <div class="wrap">
+      <div class="head-block reveal"><span class="eyebrow">Dúvidas honestas</span><h2>O que as pessoas costumam perguntar.</h2></div>
+      <div class="faq reveal">
+        <details><summary>O Juro Zero é pegadinha? <span class="plus">+</span></summary><p>Não. É uma linha de crédito com regras próprias. Na nossa conversa eu te explico direitinho como ela funciona e o que esperar, sem promessa mágica.</p></details>
+        <details><summary>Preciso ter empresa aberta pra acessar crédito? <span class="plus">+</span></summary><p>Depende da linha. Cada uma tem um critério. A gente vê na conversa o que se encaixa no seu caso.</p></details>
+        <details><summary>E se eu não for aprovada? <span class="plus">+</span></summary><p>A gente olha o porquê e vê outros caminhos, inclusive organizar primeiro pra tentar depois. Um não hoje não é um não pra sempre.</p></details>
+        <details><summary>Você atende só Porto Alegre? <span class="plus">+</span></summary><p>O Juro Zero é uma linha daqui de Porto Alegre. Já a conversa sobre finanças e organização a gente pode ter de onde você estiver.</p></details>
+        <details><summary>Quanto custa conversar com você? <span class="plus">+</span></summary><p>O primeiro passo é entender o seu momento. Me chama que eu te explico como funciona, sem compromisso.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FECHAMENTO + FORM -->
+  <section class="band section on-deep" id="conversar">
+    <div class="wrap">
+      <div class="about" style="align-items:start">
+        <div class="reveal">
+          <span class="eyebrow" style="color:var(--gold-soft)">O próximo passo</span>
+          <h2 style="font-size:clamp(2rem,1.4rem + 3vw,3.4rem)">Quando o dinheiro deixa de ser tabu, a <em>decisão</em> fica mais consciente.</h2>
+          <p style="color:var(--deep-muted); margin-top:1.2em; max-width:40ch">Me conta o que te trouxe aqui. A partir daí, a gente começa a conversa da clareza, no seu tempo.</p>
+        </div>
+        <div class="form-wrap reveal">
+          <span class="demo-pill">● Modo demonstração</span>
+          <form id="leadForm" novalidate>
+            <div class="field">
+              <label for="nome">Seu nome</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como você quer ser chamada" required>
+            </div>
+            <div class="field">
+              <label for="zap">WhatsApp</label>
+              <input id="zap" name="zap" type="tel" autocomplete="tel" placeholder="(51) 9 0000-0000" required>
+            </div>
+            <div class="field">
+              <label for="motivo">O que te trouxe aqui?</label>
+              <select id="motivo" name="motivo">
+                <option value="credito">Preciso de crédito / investimento</option>
+                <option value="organizar">Quero organizar as contas</option>
+                <option value="jurozero">Quero entender o Juro Zero</option>
+                <option value="naosei">Ainda não sei, quero conversar</option>
+              </select>
+            </div>
+            <label class="consent"><input id="consent" type="checkbox" required> Concordo em ser contatada sobre a minha solicitação.</label>
+            <div style="margin-top:18px"><button class="btn btn-primary" type="submit" style="width:100%">Quero conversar com a Si</button></div>
+            <p class="form-note">Prévia de demonstração: nenhum dado é enviado ou armazenado.</p>
+          </form>
+          <div class="form-ok" id="formOk">
+            <b style="font-family:'Fraunces';font-size:1.2rem">Recebi por aqui. ✦</b>
+            <p style="color:var(--deep-muted);margin-top:.5em">Neste preview isso é uma demonstração. Em produção, a sua mensagem chega direto pra Si e vira uma conversa de verdade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="#topo" style="color:var(--deep-fg)"><span class="mono">SF</span> Simone Freitas</a>
+        <p style="color:var(--deep-muted); margin-top:1em; max-width:34ch">Microcrédito e finanças em Porto Alegre. Conversa real sobre dinheiro, antes de decidir.</p>
+      </div>
+      <div>
+        <h4>Conteúdo</h4>
+        <a href="https://www.instagram.com/si_defreitas/" target="_blank" rel="noopener">Instagram @si_defreitas</a>
+        <a href="https://www.youtube.com/@SiMONEYpodcast" target="_blank" rel="noopener">YouTube · SiMONEY</a>
+        <a href="https://www.threads.net/@si_defreitas" target="_blank" rel="noopener">Threads @si_defreitas</a>
+      </div>
+      <div>
+        <h4>Falar com a Si</h4>
+        <span class="copytext" data-copy="Fale com a Si pelo Instagram @si_defreitas">Copiar contato</span>
+        <a href="#conversar">Começar a conversa</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>Prévia criada pela ANi | Alquimia Digital · demonstração, não indexada.</span>
+      <span>Formulário e botões em modo demonstração.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Tema: alterna e lembra a escolha do visitante */
+  var root = document.documentElement, tglt = document.getElementById("themeToggle");
+  try{ var saved = localStorage.getItem("si-theme"); if(saved) root.setAttribute("data-theme", saved); }catch(e){}
+  if(tglt){ tglt.addEventListener("click", function(){
+    var cur = root.getAttribute("data-theme");
+    var isDark = cur ? cur === "dark" : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    var next = isDark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try{ localStorage.setItem("si-theme", next); }catch(e){}
+  }); }
+
+  /* Vídeos: pausa e mostra o poster para quem prefere menos movimento */
+  if(reduce){
+    document.querySelectorAll("video").forEach(function(v){
+      v.removeAttribute("autoplay"); v.autoplay=false;
+      try{ v.pause(); }catch(e){}
+    });
+  }
+
+  /* Reveal ao rolar (só com movimento permitido) */
+  if(!reduce && "IntersectionObserver" in window){
+    document.body.classList.add("js-reveal");
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, {threshold:.14, rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  }
+
+  /* Flutuação suave (parallax) dos elementos marcados */
+  if(!reduce){
+    var floaters = [].slice.call(document.querySelectorAll("[data-float]"));
+    var t0 = performance.now();
+    function tick(now){
+      var t = (now - t0)/1000;
+      floaters.forEach(function(el,i){
+        var sp = parseFloat(el.getAttribute("data-float")) || 1;
+        var y = Math.sin(t*0.7 + i)*7*sp;
+        var x = Math.cos(t*0.5 + i)*3*sp;
+        el.style.transform = "translate("+x.toFixed(2)+"px,"+y.toFixed(2)+"px)";
+      });
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  /* Formulário em modo demonstração */
+  var form = document.getElementById("leadForm"), ok = document.getElementById("formOk");
+  if(form){ form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    form.style.display = "none";
+    if(ok){ ok.classList.add("show"); ok.scrollIntoView({behavior: reduce?"auto":"smooth", block:"center"}); }
+  }); }
+
+  /* Botão copiar contato */
+  document.querySelectorAll(".copytext").forEach(function(el){
+    el.addEventListener("click", function(){
+      var txt = el.getAttribute("data-copy") || el.textContent;
+      var done = function(){ var o = el.textContent; el.textContent = "Copiado ✓"; setTimeout(function(){ el.textContent = o; }, 1600); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(done).catch(function(){ done(); });
+      } else { done(); }
+    });
+  });
+})();
+</script>
+
+</body></html>

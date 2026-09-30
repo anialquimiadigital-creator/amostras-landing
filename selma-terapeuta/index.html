@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#2B2330">
+<title>Selma · Terapia Emocional</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Terapia emocional com acolhimento e escuta de verdade. Um espaço seguro para reprocessar o que pesa e voltar a respirar.">
+<meta property="og:title" content="Selma · Terapia Emocional: um espaço seguro pra respirar">
+<meta property="og:description" content="Terapia emocional com escuta de verdade, no seu tempo.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nunito+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F6F1EC; --surface:#FFFFFF; --ink:#2B2330; --muted:#6E6473;
+  --line:rgba(43,35,48,.12); --accent:#9A6483; --accent-soft:#E3C9D6;
+  --deep:#2B2330; --deep-2:#221B28; --deep-fg:#F3EBEF; --deep-muted:#C6B6C1; --deep-line:rgba(243,235,239,.16);
+  --maxw:1000px; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#161219; --surface:#1E1824; --ink:#F0E8EE; --muted:#B4A6B2; --line:rgba(240,232,238,.14);
+  --accent:#D69CBB; --accent-soft:#E8CBD9; --deep:#221B28; --deep-2:#140F19; --deep-fg:#F3EBEF; --deep-muted:#C6B6C1; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#161219; --surface:#1E1824; --ink:#F0E8EE; --muted:#B4A6B2; --line:rgba(240,232,238,.14);
+  --accent:#D69CBB; --accent-soft:#E8CBD9; --deep:#221B28; --deep-2:#140F19; --deep-fg:#F3EBEF; --deep-muted:#C6B6C1; color-scheme:dark;}
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:"Nunito Sans",system-ui,sans-serif; font-size:clamp(1rem,.7rem + .9vw,1.15rem); line-height:1.7; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+h1,h2,h3,.disp{font-family:"Cormorant Garamond",Georgia,serif; font-weight:500; line-height:1.08; letter-spacing:.005em; margin:0; text-wrap:balance}
+p{margin:0} a{color:inherit; text-decoration:none} img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(20px,6vw,44px)}
+.narrow{max-width:720px; margin-inline:auto}
+.section{padding-block:clamp(60px,10vw,120px)}
+.eyebrow{font-size:.76rem; letter-spacing:.24em; text-transform:uppercase; font-weight:700; color:var(--accent)}
+.muted{color:var(--muted)}
+.btn{display:inline-flex; align-items:center; gap:.5em; font-family:"Nunito Sans"; font-weight:700; font-size:1rem; padding:.9em 1.7em; border-radius:999px; border:1px solid transparent; cursor:pointer; transition:transform .2s,background .2s,box-shadow .2s,border-color .2s}
+.btn:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
+.btn-primary{background:var(--accent); color:#fff; box-shadow:0 14px 36px -16px rgba(154,100,131,.8)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent; border-color:var(--line); color:inherit} .btn-ghost:hover{border-color:var(--accent); color:var(--accent)}
+.topbar{position:sticky; top:0; z-index:40; backdrop-filter:blur(10px); background:color-mix(in srgb,var(--bg) 84%,transparent); border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex; align-items:center; justify-content:space-between; padding-block:15px; max-width:1120px}
+.brand{font-family:"Cormorant Garamond"; font-weight:600; font-size:1.5rem; letter-spacing:.01em}
+.brand span{color:var(--accent)}
+.nav{display:flex; gap:clamp(12px,2.4vw,26px); align-items:center}
+.nav-links{display:none} @media(min-width:820px){.nav-links{display:flex; gap:24px}} .nav-links a{color:var(--muted); font-size:.95rem; font-family:"Nunito Sans"} .nav-links a:hover{color:var(--ink)}
+/* HERO minimalista, sem video (calmo) */
+.hero{text-align:center; position:relative; overflow:hidden}
+.hero::before{content:""; position:absolute; z-index:0; width:70vw; height:70vw; max-width:720px; max-height:720px; left:50%; top:-30%; transform:translateX(-50%); border-radius:50%; background:radial-gradient(circle,var(--accent-soft),transparent 62%); opacity:.5; filter:blur(30px)}
+.hero .wrap{position:relative; z-index:1; padding-block:clamp(70px,13vw,150px)}
+.hero h1{font-size:clamp(2.8rem,1.6rem + 6vw,5.6rem); margin:.3em auto .35em; max-width:16ch; font-weight:500}
+.hero h1 em{font-style:italic; color:var(--accent)}
+.hero .lede{font-size:clamp(1.1rem,1rem + .6vw,1.4rem); color:var(--muted); max-width:48ch; margin:0 auto}
+.hero-cta{margin-top:2.4em; display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+.feelings{display:grid; gap:0; max-width:620px; margin-inline:auto; border-top:1px solid var(--line)}
+.feelings .f{padding:26px 0; border-bottom:1px solid var(--line); font-family:"Cormorant Garamond"; font-size:clamp(1.4rem,1rem+1.4vw,2rem); font-style:italic; color:var(--ink)}
+.feelings .f span{color:var(--accent); font-style:normal}
+/* RESPIRO: video na segunda secao (band + chip flutuante) */
+.respiro{position:relative; overflow:hidden; background:var(--deep); color:var(--deep-fg)}
+.respiro-band{position:relative; min-height:min(78vh,640px); display:grid; align-items:center; isolation:isolate}
+.respiro-bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; opacity:.9}
+.respiro-veil{position:absolute; inset:0; z-index:1; background:linear-gradient(90deg,rgba(34,27,40,.86) 0%,rgba(34,27,40,.64) 44%,rgba(34,27,40,.30) 100%)}
+@media(max-width:760px){.respiro-veil{background:linear-gradient(180deg,rgba(34,27,40,.66),rgba(34,27,40,.90))}}
+.respiro .wrap{position:relative; z-index:2; padding-block:clamp(60px,10vw,110px)}
+.respiro-grid{display:grid; gap:clamp(28px,5vw,54px); grid-template-columns:1fr; align-items:center}
+@media(min-width:900px){.respiro-grid{grid-template-columns:1fr .8fr}}
+.respiro h2{font-size:clamp(2.2rem,1.4rem+3vw,3.6rem); max-width:16ch} .respiro h2 em{font-style:italic; color:var(--accent-soft)}
+.respiro p{color:var(--deep-muted); margin-top:1em; max-width:46ch; font-size:1.08rem}
+.reelwrap{position:relative; justify-self:center}
+.reel{position:relative; width:min(240px,60vw); aspect-ratio:9/16; border-radius:24px; overflow:hidden; border:4px solid var(--surface); box-shadow:0 40px 90px -34px rgba(0,0,0,.7); will-change:transform}
+.reel video{width:100%; height:100%; object-fit:cover; display:block}
+.reeltag{position:absolute; left:-12px; bottom:22px; z-index:3; background:var(--surface); color:var(--ink); border-radius:12px; padding:.55em .85em; font-size:.78rem; line-height:1.25; box-shadow:0 18px 40px -20px rgba(0,0,0,.5); will-change:transform}
+.reeltag b{font-family:"Cormorant Garamond"; font-size:1.05rem; color:var(--accent)}
+.head{max-width:40ch} .head h2{font-size:clamp(2rem,1.4rem+2.4vw,3.2rem); margin:.2em 0 .4em}
+.center{margin-inline:auto; text-align:center}
+.help{display:grid; gap:20px; grid-template-columns:1fr} @media(min-width:760px){.help{grid-template-columns:repeat(3,1fr)}}
+.hcard{background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:28px}
+.hcard h3{font-size:1.6rem; margin:0 0 .3em} .hcard p{color:var(--muted); font-size:.98rem}
+.manifesto{text-align:center; background:linear-gradient(180deg,var(--surface),var(--bg)); border-block:1px solid var(--line)}
+.manifesto blockquote{font-family:"Cormorant Garamond"; font-style:italic; font-size:clamp(1.8rem,1.2rem+3vw,3.2rem); max-width:20ch; margin:.2em auto; line-height:1.2}
+.faq{display:grid; gap:12px; max-width:720px; margin-inline:auto}
+details{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:2px 22px} details[open]{border-color:var(--accent)}
+summary{cursor:pointer; padding:20px 0; font-family:"Cormorant Garamond"; font-size:1.4rem; list-style:none; display:flex; justify-content:space-between; gap:1em; align-items:center}
+summary::-webkit-details-marker{display:none} summary .p{color:var(--accent); font-size:1.4rem; transition:transform .2s} details[open] summary .p{transform:rotate(45deg)}
+details p{color:var(--muted); padding:0 0 22px}
+.cta{text-align:center; background:var(--deep); color:var(--deep-fg); border-radius:30px; padding:clamp(30px,5vw,60px)}
+.cta h2{font-size:clamp(2rem,1.4rem+3vw,3.4rem); max-width:18ch; margin:.2em auto} .cta h2 em{font-style:italic; color:var(--accent-soft)}
+.form{max-width:460px; margin:1.6em auto 0; text-align:left}
+.field{display:grid; gap:.4em; margin-bottom:14px} .field label{font-size:.85rem; font-weight:700; color:var(--deep-fg)}
+.field input,.field select{font-family:inherit; font-size:1rem; padding:.85em .95em; border-radius:12px; border:1px solid var(--deep-line); background:rgba(255,255,255,.06); color:var(--deep-fg)}
+.field input::placeholder{color:var(--deep-muted)} .field input:focus,.field select:focus{outline:2px solid var(--accent-soft); outline-offset:1px}
+.consent{display:flex; gap:.6em; font-size:.84rem; color:var(--deep-muted); text-align:left} .consent input{margin-top:.25em}
+.demo-pill{display:inline-flex; gap:.5em; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-soft); border:1px solid var(--deep-line); border-radius:999px; padding:.4em .8em; margin-bottom:1em}
+.form-note{margin-top:12px; font-size:.82rem; color:var(--deep-muted)}
+.form-ok{display:none; margin-top:14px; padding:18px; border-radius:14px; background:rgba(255,255,255,.06); border:1px solid var(--accent-soft)} .form-ok.show{display:block}
+.footer{background:var(--deep-2); color:var(--deep-fg); padding-block:48px 34px; text-align:center}
+.footer a{color:var(--accent-soft)} .footer .muted{color:var(--deep-muted)}
+.copytext{cursor:pointer; text-decoration:underline dotted; text-underline-offset:3px; color:var(--accent-soft)}
+body.js-reveal .reveal{opacity:0; transform:translateY(22px); transition:opacity .8s, transform .8s} body.js-reveal .reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="#topo">Selma <span>·</span> terapia emocional</a>
+  <nav class="nav"><div class="nav-links"><a href="#respiro">O cuidado</a><a href="#ajuda">Como ajudo</a><a href="#duvidas">Dúvidas</a></div>
+  <a class="btn btn-primary" href="#conversar" style="padding:.6em 1.2em">Agendar</a></nav>
+</div></header>
+
+<main id="topo">
+  <section class="hero"><div class="wrap">
+    <span class="eyebrow">Terapia emocional</span>
+    <h1>Você não precisa carregar tudo <em>sozinha.</em></h1>
+    <p class="lede">Tem dores que a gente aprende a esconder pra dar conta do dia. Aqui existe um espaço seguro pra olhar pra elas, no seu tempo, sem julgamento.</p>
+    <div class="hero-cta"><a class="btn btn-primary" href="#conversar">Quero conversar</a><a class="btn btn-ghost" href="#ajuda">Como funciona</a></div>
+  </div></section>
+
+  <section class="section" style="padding-top:0"><div class="wrap">
+    <div class="feelings reveal">
+      <div class="f">Ando <span>cansada</span> de um jeito que dormir não resolve.</div>
+      <div class="f">Sorrio por fora e <span>seguro o choro</span> por dentro.</div>
+      <div class="f">Queria entender por que <span>doí tanto</span> e como aliviar.</div>
+    </div>
+  </div></section>
+
+  <!-- VIDEO NA SEGUNDA SECAO: respiro com band + chip flutuante -->
+  <section class="respiro" id="respiro">
+    <div class="respiro-band">
+      <video class="respiro-bg" src="media/band.mp4" poster="media/band-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+      <div class="respiro-veil" aria-hidden="true"></div>
+      <div class="wrap"><div class="respiro-grid">
+        <div class="reveal">
+          <span class="eyebrow" style="color:var(--accent-soft)">Um respiro</span>
+          <h2>Cuidar de dentro também é <em>coragem.</em></h2>
+          <p>A terapia não apaga o que aconteceu. Ela te ajuda a reprocessar o que pesa, pra que a memória deixe de doer tanto e você volte a respirar mais leve.</p>
+          <div style="margin-top:1.6em"><a class="btn btn-primary" href="#conversar">Começar com calma</a></div>
+        </div>
+        <div class="reelwrap">
+          <div class="reel" data-float="1"><video src="media/chip.mp4" poster="media/chip-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></div>
+          <span class="reeltag" data-float="1.6"><b>No seu tempo</b><br><span class="muted">sem pressa</span></span>
+        </div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="section" id="ajuda"><div class="wrap">
+    <div class="head center reveal"><span class="eyebrow">Como eu ajudo</span><h2>Um cuidado que respeita a sua história.</h2></div>
+    <div class="help">
+      <div class="hcard reveal"><h3>Escuta</h3><p>Antes de qualquer técnica, um espaço seguro pra você falar e ser ouvida de verdade.</p></div>
+      <div class="hcard reveal"><h3>Reprocessar</h3><p>A gente trabalha o que ficou preso, pra que o passado pese menos no seu presente.</p></div>
+      <div class="hcard reveal"><h3>Recomeçar</h3><p>Você reencontra recursos pra lidar com a vida com mais leveza e confiança.</p></div>
+    </div>
+  </div></section>
+
+  <section class="manifesto section"><div class="wrap reveal">
+    <span class="eyebrow">O que eu acredito</span>
+    <blockquote>Ninguém deveria ter que ser forte o tempo todo.</blockquote>
+  </div></section>
+
+  <section class="section" id="duvidas"><div class="wrap">
+    <div class="head center reveal"><span class="eyebrow">Dúvidas honestas</span><h2>O que costumam me perguntar.</h2></div>
+    <div class="faq reveal">
+      <details><summary>Nunca fiz terapia, e agora? <span class="p">+</span></summary><p>A gente começa devagar, com uma conversa de acolhimento. Você não precisa saber por onde começar. Esse é o meu trabalho.</p></details>
+      <details><summary>Atende presencial ou online? <span class="p">+</span></summary><p>Os dois. A gente combina o formato que for mais confortável e seguro pra você.</p></details>
+      <details><summary>Em quanto tempo eu melhoro? <span class="p">+</span></summary><p>Cada história tem o seu tempo, e eu não vou te prometer milagre. O que eu garanto é um cuidado sério e respeitoso a cada passo.</p></details>
+      <details><summary>O que a gente conversa fica em sigilo? <span class="p">+</span></summary><p>Sim, sempre. O sigilo é a base da confiança e faz parte do meu compromisso com você.</p></details>
+      <details><summary>Como agendo? <span class="p">+</span></summary><p>Me chama que eu explico como funciona e os valores, com transparência e sem compromisso.</p></details>
+    </div>
+  </div></section>
+
+  <section class="section" id="conversar"><div class="wrap"><div class="cta reveal">
+    <span class="eyebrow" style="color:var(--accent-soft)">O próximo passo</span>
+    <h2>Dar o primeiro passo já é <em>cuidar de você.</em></h2>
+    <p class="muted" style="color:var(--deep-muted); max-width:44ch; margin:1em auto 0">Me conta um pouquinho do seu momento. A primeira conversa é pra gente se conhecer, sem pressa.</p>
+    <div class="form">
+      <span class="demo-pill">● Modo demonstração</span>
+      <form id="leadForm" novalidate>
+        <div class="field"><label for="nome">Seu nome</label><input id="nome" type="text" autocomplete="name" placeholder="Como você quer ser chamada" required></div>
+        <div class="field"><label for="zap">WhatsApp</label><input id="zap" type="tel" autocomplete="tel" placeholder="(51) 9 0000-0000" required></div>
+        <div class="field"><label for="motivo">O que te traz aqui?</label><select id="motivo"><option>Ansiedade e cansaço</option><option>Uma dor do passado</option><option>Relacionamentos</option><option>Só preciso conversar</option></select></div>
+        <label class="consent"><input type="checkbox" required> Concordo em ser contatada sobre o meu agendamento.</label>
+        <div style="margin-top:16px"><button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Agendar uma conversa</button></div>
+        <p class="form-note">Prévia de demonstração: nenhum dado é enviado ou armazenado.</p>
+        <div class="form-ok" id="formOk"><b style="font-family:'Cormorant Garamond';font-size:1.3rem">Recebi com carinho. ✦</b><p class="muted" style="color:var(--deep-muted);margin-top:.4em">Nesta prévia é demonstração. Em produção, a sua mensagem chega direto pra Selma.</p></div>
+      </form>
+    </div>
+  </div></div></section>
+</main>
+
+<footer class="footer"><div class="wrap">
+  <p class="brand" style="color:var(--deep-fg)">Selma <span>·</span> terapia emocional</p>
+  <p class="muted" style="max-width:40ch;margin:.8em auto 1.4em">Um espaço seguro pra reprocessar o que pesa e voltar a respirar. No seu tempo.</p>
+  <p><a href="https://www.instagram.com/selma_terapeuta_emocional_trg/" target="_blank" rel="noopener">Instagram @selma_terapeuta_emocional_trg</a></p>
+  <p style="margin-top:.4em"><span class="copytext" data-copy="Fale com a Selma pelo Instagram @selma_terapeuta_emocional_trg">Copiar contato</span></p>
+  <p class="muted" style="margin-top:1.6em; font-size:.8rem">Prévia criada pela ANi | Alquimia Digital · demonstração, não indexada. Imagens de referência.</p>
+</div></footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce){document.querySelectorAll("video").forEach(function(v){v.removeAttribute("autoplay");try{v.pause();}catch(e){}});}
+  if(!reduce&&"IntersectionObserver"in window){document.body.classList.add("js-reveal");var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.14,rootMargin:"0px 0px -8% 0px"});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el);});}
+  if(!reduce){var fl=[].slice.call(document.querySelectorAll("[data-float]"));var t0=performance.now();(function tk(now){var t=(now-t0)/1000;fl.forEach(function(el,i){var sp=parseFloat(el.getAttribute("data-float"))||1;el.style.transform="translate("+(Math.cos(t*0.5+i)*3*sp).toFixed(2)+"px,"+(Math.sin(t*0.7+i)*7*sp).toFixed(2)+"px)";});requestAnimationFrame(tk);})(performance.now());}
+  var form=document.getElementById("leadForm"),ok=document.getElementById("formOk");
+  if(form){form.addEventListener("submit",function(e){e.preventDefault();if(!form.checkValidity()){form.reportValidity();return;}Array.prototype.forEach.call(form.children,function(el){if(el.id!=="formOk")el.style.display="none";});if(ok){ok.classList.add("show");ok.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});}});}
+  document.querySelectorAll(".copytext").forEach(function(el){el.addEventListener("click",function(){var t=el.getAttribute("data-copy")||el.textContent;var d=function(){var o=el.textContent;el.textContent="Copiado ✓";setTimeout(function(){el.textContent=o;},1600);};if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(d).catch(d);}else{d();}});});
+})();
+</script>
+</body></html>
